@@ -374,7 +374,7 @@ const translations = {
         title: 'Luxe reizen,<br>persoonlijke service,<br>nul stress.',
         subtitle: 'Reizen op maat naar elke bestemming, voor elke reiziger. Samengesteld door experts \u2014 niet door algoritmes.',
         ctaExplore: 'Ontdek onze reizen',
-        ctaWhatsApp: 'Chat via WhatsApp'
+        ctaWhatsApp: 'Chat op WhatsApp'
       },
       trust: {
         item1: {

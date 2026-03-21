@@ -46,6 +46,8 @@ function setLanguage(lang) {
         el.placeholder = value;
       } else if (el.tagName === 'OPTION') {
         el.textContent = value;
+      } else if (typeof value === 'string' && value.includes('<')) {
+        el.innerHTML = value;
       } else {
         el.textContent = value;
       }
@@ -73,13 +75,21 @@ function initLanguageToggle(currentLang) {
   const navLinks = document.querySelector('.nav-links');
   const mobileMenu = document.querySelector('.mobile-menu');
 
+  const getCounterpartHref = (lang) => {
+    const path = window.location.pathname;
+    const search = window.location.search;
+    if (path.startsWith('/en/')) return path.replace('/en/', `/${lang}/`) + search;
+    if (path.startsWith('/nl/')) return path.replace('/nl/', `/${lang}/`) + search;
+    return `/${lang}/index.html` + search;
+  };
+
   const createToggle = () => {
     const wrapper = document.createElement('span');
     wrapper.className = 'lang-toggle';
     wrapper.style.cssText = 'font-family: var(--font-heading); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; display: inline-flex; gap: 4px; align-items: center;';
 
     const nlLink = document.createElement('a');
-    nlLink.href = '#';
+    nlLink.href = getCounterpartHref('nl');
     nlLink.textContent = 'NL';
     nlLink.setAttribute('data-lang', 'nl');
     nlLink.style.cssText = currentLang === 'nl' ? 'color: var(--color-gold); opacity: 1; cursor: pointer;' : 'opacity: 0.6; cursor: pointer;';
@@ -89,34 +99,10 @@ function initLanguageToggle(currentLang) {
     sep.style.opacity = '0.4';
 
     const enLink = document.createElement('a');
-    enLink.href = '#';
+    enLink.href = getCounterpartHref('en');
     enLink.textContent = 'EN';
     enLink.setAttribute('data-lang', 'en');
     enLink.style.cssText = currentLang === 'en' ? 'color: var(--color-gold); opacity: 1; cursor: pointer;' : 'opacity: 0.6; cursor: pointer;';
-
-    const handleClick = (e) => {
-      e.preventDefault();
-      const lang = e.target.getAttribute('data-lang');
-      if (!lang) return;
-
-      // Navigate to the equivalent page in the other language folder
-      const path = window.location.pathname;
-      const search = window.location.search;
-      let newPath;
-      if (path.startsWith('/en/')) {
-        newPath = path.replace('/en/', `/${lang}/`);
-      } else if (path.startsWith('/nl/')) {
-        newPath = path.replace('/nl/', `/${lang}/`);
-      } else {
-        // Root level — just switch language client-side
-        setLanguage(lang);
-        return;
-      }
-      window.location.href = newPath + search;
-    };
-
-    nlLink.addEventListener('click', handleClick);
-    enLink.addEventListener('click', handleClick);
 
     wrapper.appendChild(nlLink);
     wrapper.appendChild(sep);
@@ -204,6 +190,12 @@ function initAccordions() {
       }
     });
   });
+}
+
+// ─── Language Helper ──────────────────────────────────────────────
+
+function getLang() {
+  return document.documentElement.lang || localStorage.getItem('pt-lang') || 'en';
 }
 
 // ─── Dynamic Content ───────────────────────────────────────────────
@@ -309,10 +301,19 @@ function renderItineraryDetail() {
 
   const itin = itineraries.find(i => i.internalId === id) || itineraries.find(i => i.internalId === 'DXB-02') || itineraries[0];
   const tier = getTierDisplay(itin.tier);
+  const lang = getLang();
+  const isNL = lang === 'nl';
+
+  const description = isNL && itin.subtitle_nl ? itin.subtitle_nl : itin.cardDescription;
+  const hotelDesc = isNL && itin.resortDescription_nl ? itin.resortDescription_nl : itin.resortDescription;
+  const inclusions = isNL && itin.highlights_nl ? itin.highlights_nl : itin.highlights;
+  const experiences = isNL && itin.excursions_nl ? itin.excursions_nl : itin.excursions;
+  const flightNote = isNL && itin.flightsNote_nl ? itin.flightsNote_nl : itin.flightsNote;
+  const waText = isNL && itin.whatsappText_nl ? itin.whatsappText_nl : `Hi Prestige Travels, I'd like to enquire about the ${itin.name} package.`;
 
   document.title = `${itin.name} | Prestige Travels`;
 
-  const waMessage = encodeURIComponent(`Hi Prestige Travels, I'd like to enquire about the ${itin.name} package.`);
+  const waMessage = encodeURIComponent(waText);
 
   container.innerHTML = `
     <!-- Hero -->
@@ -323,7 +324,7 @@ function renderItineraryDetail() {
         <div style="margin: 0 auto; max-width: 800px;">
           <span class="tier-badge ${tier.className}" style="margin-bottom: 24px; display: inline-block;">${tier.label}</span>
           <h1>${itin.name}</h1>
-          <p>${itin.cardDescription}</p>
+          <p>${description}</p>
         </div>
       </div>
     </section>
@@ -343,7 +344,7 @@ function renderItineraryDetail() {
     <!-- Flights Note -->
     <div style="background-color: var(--color-offwhite); padding: 16px 0; text-align: center; font-size: 14px;">
       <div class="container">
-        &#10022; ${itin.flightsNote}
+        &#10022; ${flightNote}
       </div>
     </div>
 
@@ -354,10 +355,10 @@ function renderItineraryDetail() {
         <div class="mb-16">
           <h2 data-i18n="itinerary.stayTitle">Where you'll stay</h2>
           <div style="display: grid; grid-template-columns: 1fr; gap: 40px; align-items: center;">
-            <img src="${itin.heroImage}" alt="${itin.resortHotel}" style="width: 100%; height: 400px; object-fit: cover;">
+            <img src="${itin.hotelImage || itin.heroImage}" alt="${itin.resortHotel}" style="width: 100%; height: 400px; object-fit: cover;">
             <div>
               <h3 style="margin-bottom: 16px;">${itin.resortHotel}</h3>
-              <p>${itin.resortDescription}</p>
+              <p>${hotelDesc}</p>
             </div>
           </div>
         </div>
@@ -365,7 +366,7 @@ function renderItineraryDetail() {
         <div class="mb-16">
           <h2 data-i18n="itinerary.packageTitle">Included in your package</h2>
           <ul style="list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px;">
-            ${itin.highlights.map(item => `
+            ${inclusions.map(item => `
               <li style="padding: 16px; background: var(--color-offwhite);">&check; ${item}</li>
             `).join('')}
           </ul>
@@ -374,7 +375,7 @@ function renderItineraryDetail() {
         <div class="mb-16">
           <h2 data-i18n="itinerary.experiencesTitle">Your experiences</h2>
           <div class="grid-3">
-            ${itin.excursions.map(exc => `
+            ${experiences.map(exc => `
               <div style="background: var(--color-offwhite); padding: 24px;">
                 <h4 style="margin-bottom: 12px;">${exc.title}</h4>
                 <p style="font-size: 14px;">${exc.desc}</p>
@@ -401,8 +402,10 @@ function renderItineraryDetail() {
 // ─── Itinerary Cards ───────────────────────────────────────────────
 
 function renderItineraryCards(itins, getTierDisplay) {
+  const isNL = getLang() === 'nl';
   return itins.map(itin => {
     const tier = getTierDisplay(itin.tier);
+    const cardDesc = isNL && itin.subtitle_nl ? itin.subtitle_nl : itin.cardDescription;
     return `
       <a href="itinerary.html?id=${itin.internalId}" class="itin-card">
         <img src="${itin.heroImage}" alt="${itin.name}" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&q=80'">
@@ -412,7 +415,7 @@ function renderItineraryCards(itins, getTierDisplay) {
         </div>
         <div class="itin-overlay">
           <h3>${itin.name}</h3>
-          <p class="itin-teaser">${itin.cardDescription}</p>
+          <p class="itin-teaser">${cardDesc}</p>
           <div class="itin-drawer">
             <div class="itin-meta">
               <span>${itin.duration}</span>
@@ -578,7 +581,10 @@ function initQuoteForm() {
     if (itin) {
       const detailsField = document.getElementById('details');
       if (detailsField) {
-        detailsField.value = `I am interested in the ${itin.name} itinerary.`;
+        const lang = getLang();
+        detailsField.value = lang === 'nl'
+          ? `Ik ben geïnteresseerd in het ${itin.name} arrangement.`
+          : `I am interested in the ${itin.name} itinerary.`;
       }
       const destField = document.getElementById('destination');
       if (destField) {
@@ -607,7 +613,7 @@ function initQuoteForm() {
     }
   }
 
-  form.addEventListener('submit', (e) => {
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
     const btn = form.querySelector('button[type="submit"]');
     const originalText = btn.textContent;
@@ -615,14 +621,22 @@ function initQuoteForm() {
     btn.textContent = 'Sending...';
     btn.disabled = true;
 
-    // Simulate API call
-    setTimeout(() => {
-      form.innerHTML = `
-        <div class="text-center" style="padding: 40px 0;">
-          <h3 style="color: var(--color-gold); margin-bottom: 16px;">Thank you for your request.</h3>
-          <p>Your advisor will review your details and send a personalised proposal within 24 hours.</p>
-        </div>
-      `;
-    }, 1500);
+// Submit to API
+        const formData = new FormData(form);
+                const data = Object.fromEntries(formData);
+                        const lang = getLang();
+                                try {
+                                          const response = await fetch('/api/quote', {
+                                                      method: 'POST',
+                                                                  headers: { 'Content-Type': 'application/json' },
+                                                                              body: JSON.stringify(data)
+                                                                                        });
+                                                                                                  form.innerHTML = lang === 'nl'
+                                                                                                              ? '<div class="text-center" style="padding: 40px 0;"><h3 style="color: var(--color-gold); margin-bottom: 16px;">Bedankt voor uw aanvraag.</h3><p>Uw adviseur bekijkt uw gegevens en stuurt u binnen 24 uur een persoonlijk voorstel.</p></div>'
+                                                                                                                          : '<div class="text-center" style="padding: 40px 0;"><h3 style="color: var(--color-gold); margin-bottom: 16px;">Thank you for your request.</h3><p>Your advisor will review your details and send a personalised proposal within 24 hours.</p></div>';
+                                                                                                                                  } catch (error) {
+                                                                                                                                            btn.textContent = originalText;
+                                                                                                                                                      btn.disabled = false;
+                                                                                                                                                              }
   });
 }

@@ -43,6 +43,7 @@ const itineraries = [
     flightsNote: 'Flights from AMS not included. Can be arranged on request.',
     cardDescription: 'A perfect introduction to Amsterdam with handpicked local highlights.',
     heroImage: 'https://images.unsplash.com/photo-1534351590666-13e3e96b5017?auto=format&fit=crop&q=80&w=800',
+    hotelImage: 'https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&q=80&w=800',
     resortDescription: 'Hotel V Nesplein is a design-led boutique hotel on the edge of Amsterdam\'s Nine Streets district. Its rooftop bar offers panoramic views of the city, and the central location puts you minutes from Dam Square and the canals.',
     highlights: [
       '3 Nights Boutique Accommodation',
@@ -56,7 +57,23 @@ const itineraries = [
       { title: 'Jordaan Hidden Gems Tour', desc: 'A walking tour led by a local expert focusing on secret courtyards, independent galleries, and local history.' },
       { title: 'Vondelpark & Museum Quarter Walk', desc: 'A self-guided audio walk through Amsterdam\'s cultural heart, passing the Rijksmuseum, Van Gogh Museum, and Concertgebouw.' }
     ],
-    featured: false
+    featured: false,
+    subtitle_nl: 'Een perfecte kennismaking met Amsterdam met zorgvuldig geselecteerde lokale hoogtepunten.',
+    resortDescription_nl: 'Hotel V Nesplein is een design-gedreven boutiquehotel aan de rand van de Negen Straatjes in Amsterdam. Het dakterras biedt panoramisch uitzicht over de stad, en de centrale ligging brengt u binnen enkele minuten bij de Dam en de grachten.',
+    highlights_nl: [
+      '3 nachten boutiqueaccommodatie',
+      'Dagelijks ambachtelijk ontbijt',
+      'Privé rondvaart (90 min)',
+      'Begeleide wandeltour door de Jordaan',
+      '24/7 WhatsApp reisadviseur'
+    ],
+    excursions_nl: [
+      { title: 'PRIVÉ RONDVAART', desc: 'Een 90 minuten durende privéboottocht door de UNESCO-werelderfgoed grachtenring met lokale hapjes en drankjes.' },
+      { title: 'VERBORGEN PARELS VAN DE JORDAAN', desc: 'Een wandeltour met een lokale gids langs geheime hofjes, onafhankelijke galerijen en lokale geschiedenis.' },
+      { title: 'VONDELPARK & MUSEUMKWARTIER', desc: 'Een zelfgeleide audiotour door het culturele hart van Amsterdam, langs het Rijksmuseum, Van Gogh Museum en Concertgebouw.' }
+    ],
+    flightsNote_nl: 'Vluchten vanuit AMS niet inbegrepen. Op aanvraag te regelen.',
+    whatsappText_nl: 'Hallo Prestige Travels, ik wil meer weten over het Amsterdam Essentials pakket.'
   },
   {
     internalId: 'AMS-02',
@@ -69,7 +86,8 @@ const itineraries = [
     boardBasis: 'Half Board',
     flightsNote: 'Flights from AMS not included. Can be arranged on request.',
     cardDescription: 'Elevated canal-side luxury with private museum access and fine dining.',
-    heroImage: 'https://images.unsplash.com/photo-1580137189272-c9379f8864fd?auto=format&fit=crop&q=80&w=800',
+    heroImage: 'https://images.unsplash.com/photo-1576400883215-7083980b6193?auto=format&fit=crop&q=80&w=800',
+    hotelImage: 'https://images.unsplash.com/photo-1590490360182-c33d955e5d83?auto=format&fit=crop&q=80&w=800',
     resortDescription: 'The Pulitzer Amsterdam occupies 25 restored Golden Age canal houses on the Prinsengracht. With its private garden, canal-side terrace, and award-winning restaurant Jansz, it is one of the city\'s most iconic luxury hotels.',
     highlights: [
       '4 Nights in a Canal View Room',
@@ -83,7 +101,23 @@ const itineraries = [
       { title: 'Michelin Dining Experience', desc: 'A curated 5-course tasting menu at one of Amsterdam\'s premier Michelin-starred restaurants with wine pairing.' },
       { title: 'Artisan Cheese & Wine Cruise', desc: 'A private evening canal cruise with a curated selection of Dutch artisan cheeses and local wines.' }
     ],
-    featured: true
+    featured: true,
+    subtitle_nl: 'Verhoogde luxe aan de gracht met privétoegang tot musea en fine dining.',
+    resortDescription_nl: 'Het Pulitzer Amsterdam is een iconisch vijfsterrenhotel dat 25 historische grachtenpanden verenigt tot een uniek verblijf. De schilderachtige tuin, de eigen rondvaartboot en de gerenommeerde restaurants maken dit een onvergetelijke ervaring.',
+    highlights_nl: [
+      '4 nachten halfpension in historisch grachtenpand',
+      'Privé museumtour (Rijksmuseum of Van Gogh)',
+      'Klassieke rondvaart met champagne',
+      'Fine dining diner voor twee personen',
+      'Premium transfers'
+    ],
+    excursions_nl: [
+      { title: 'PRIVÉ MUSEUMTOUR', desc: 'Exclusieve toegang buiten openingstijden tot het Rijksmuseum of Van Gogh Museum, begeleid door een privékurator.' },
+      { title: 'CHAMPAGNE RONDVAART', desc: 'Een romantische vaartocht door de verlichte grachten aan boord van een klassieke sloep met champagne en canapés.' },
+      { title: 'FINE DINING AMSTERDAM', desc: 'Een diner bij een van Amsterdams meest gelauwerde restaurants, inclusief wijnpairing op maat.' }
+    ],
+    flightsNote_nl: 'Vluchten vanuit AMS niet inbegrepen. Op aanvraag te regelen.',
+    whatsappText_nl: 'Hallo Prestige Travels, ik wil meer weten over het Amsterdam Refined pakket.'
   },
   {
     internalId: 'AMS-03',
@@ -96,7 +130,8 @@ const itineraries = [
     boardBasis: 'Full Board + Extras',
     flightsNote: 'Flights from AMS not included. Premium transfers included.',
     cardDescription: 'The ultimate Amsterdam experience with dedicated concierge and exclusive access.',
-    heroImage: 'https://images.unsplash.com/photo-1605146769289-440113cc3d00?auto=format&fit=crop&q=80&w=800',
+    heroImage: 'https://images.unsplash.com/photo-1512470876302-972faa2aa9a4?auto=format&fit=crop&q=80&w=800',
+    hotelImage: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=800',
     resortDescription: 'Hotel de l\'Europe is a five-star landmark on the Amstel river, blending 19th-century grandeur with contemporary Dutch design. Its Michelin-starred restaurant Flore and Elemis spa make it the pinnacle of Amsterdam luxury.',
     highlights: [
       '5 Nights in a River View Suite',
@@ -110,7 +145,23 @@ const itineraries = [
       { title: 'Exclusive Garden Dinner', desc: 'A private multi-course dinner served in the hotel\'s magnificent courtyard garden, the largest private garden in central Amsterdam.' },
       { title: 'Helicopter Tour over Holland', desc: 'A 30-minute private helicopter flight over the Amsterdam canal ring, tulip fields, and windmills of Zaanse Schans.' }
     ],
-    featured: false
+    featured: false,
+    subtitle_nl: 'De ultieme Amsterdam-ervaring met een persoonlijke conciërge en exclusieve toegang.',
+    resortDescription_nl: 'Hotel De L\'Europe is het meest iconische luxehotel van Amsterdam, gelegen aan de Amstel met uitzicht op de grachten. Het combineert 19e-eeuwse grandeur met moderne verfijning, inclusief een Michelin-restaurant en een privéspa.',
+    highlights_nl: [
+      '5 nachten volpension inclusief extras',
+      'Persoonlijke conciërge voor de gehele reis',
+      'Privétransfers inclusief helikopteroptie',
+      'Exclusieve toegang tot besloten evenementen',
+      'VIP diner bij Michelin-restaurant Bord\'Eau'
+    ],
+    excursions_nl: [
+      { title: 'HELIKOPTERVLUCHT OVER AMSTERDAM', desc: 'Een privévlucht over de Amsterdam Metropolitan Area met uitzicht op de grachtenring, havens en polders.' },
+      { title: 'PRIVÉ ATELIER BEZOEK', desc: 'Exclusieve toegang tot een gerenommeerd Amsterdams kunstenaarsstudio, inclusief ontmoeting met de kunstenaar.' },
+      { title: 'KONINKLIJK AMSTERDAM DINER', desc: 'Een meercijferig diner in een van de meest exclusieve privé eetkamers van de stad, gereserveerd via uw conciërge.' }
+    ],
+    flightsNote_nl: 'Vluchten vanuit AMS niet inbegrepen. Premium transfers inbegrepen.',
+    whatsappText_nl: 'Hallo Prestige Travels, ik wil meer weten over het Amsterdam Prestige pakket.'
   },
   {
     internalId: 'DXB-01',
@@ -124,6 +175,7 @@ const itineraries = [
     flightsNote: 'Return flights from Amsterdam (AMS) included.',
     cardDescription: 'Experience the vibrant energy of downtown Dubai with desert safari included.',
     heroImage: 'https://images.unsplash.com/photo-1518684079-3c830dcef090?auto=format&fit=crop&q=80&w=800',
+    hotelImage: 'https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&q=80&w=800',
     resortDescription: 'Rove Downtown is a modern, design-forward hotel steps from the Dubai Mall and Burj Khalifa. Its rooftop pool offers stunning skyline views, and the central location makes it perfect for first-time visitors.',
     highlights: [
       '5 Nights Modern Accommodation',
@@ -137,7 +189,23 @@ const itineraries = [
       { title: 'Dubai Marina Dhow Cruise', desc: 'A relaxing 2-hour evening cruise through the marina with an international buffet dinner and live entertainment.' },
       { title: 'Old Dubai Heritage Walk', desc: 'A guided walking tour through Al Fahidi, the Gold Souk, and the Spice Souk with traditional Arabic coffee.' }
     ],
-    featured: false
+    featured: false,
+    subtitle_nl: 'Beleef de bruisende energie van het stadscentrum van Dubai inclusief woestijnsafari.',
+    resortDescription_nl: 'Rove Downtown Dubai is een stijlvol, modern hotel op loopafstand van de Burj Khalifa en Dubai Mall. Het biedt eigentijdse kamers, een dakteras en een ideale ligging voor stadverkenning.',
+    highlights_nl: [
+      '5 nachten bed & breakfast',
+      'Retourvluchten vanuit Amsterdam',
+      'Privétransfer luchthaven',
+      'Woestijnsafari met diner',
+      'Rondleiding Burj Khalifa (At The Top)'
+    ],
+    excursions_nl: [
+      { title: 'WOESTIJNSAFARI MET DINER', desc: 'Een privé duinsafari in de Arabische woestijn, gevolgd door een authentiek Bedoeïenen-diner onder de sterren.' },
+      { title: 'BURJ KHALIFA AT THE TOP', desc: 'Toegang tot het 148e verdieping observatiedek met zonsondergang en panoramisch uitzicht over Dubai.' },
+      { title: 'DUBAI MALL & FONTEINSHOW', desc: 'Een avond bij \'s werelds grootste winkelcentrum, afgesloten met de spectaculaire Dubai Fountain show.' }
+    ],
+    flightsNote_nl: 'Retourvluchten vanuit Amsterdam (AMS) inbegrepen.',
+    whatsappText_nl: 'Hallo Prestige Travels, ik wil meer weten over het Dubai Discovery pakket.'
   },
   {
     internalId: 'DXB-02',
@@ -150,7 +218,8 @@ const itineraries = [
     boardBasis: 'Half Board',
     flightsNote: 'Return flights from Amsterdam (AMS) included.',
     cardDescription: 'Beachfront luxury on the Palm with premium desert and skyline experiences.',
-    heroImage: 'https://images.unsplash.com/photo-1582672060624-ac926d15274c?auto=format&fit=crop&q=80&w=800',
+    heroImage: 'https://images.unsplash.com/photo-1582672060674-bc2bd808a8b5?auto=format&fit=crop&q=80&w=800',
+    hotelImage: 'https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&q=80&w=800',
     resortDescription: 'Atlantis The Palm is an iconic resort at the crescent of Palm Jumeirah. With its private beach, Aquaventure waterpark, the Lost Chambers aquarium, and celebrity chef restaurants, it delivers an unforgettable Dubai experience.',
     highlights: [
       '7 Nights Beachfront Luxury',
@@ -164,7 +233,23 @@ const itineraries = [
       { title: 'Burj Khalifa At The Top', desc: 'Fast-track entry to the 148th floor observation deck with premium lounge access and champagne.' },
       { title: 'Palm Jumeirah Speedboat Tour', desc: 'A 90-minute private speedboat tour around the Palm and Dubai Marina with skyline photo opportunities.' }
     ],
-    featured: true
+    featured: true,
+    subtitle_nl: 'Luxe aan het strand op Palm Jumeirah met exclusieve woestijn- en skylinebelevenissen.',
+    resortDescription_nl: 'Atlantis The Palm is het meest iconische resort van Dubai, gelegen op het punt van Palm Jumeirah. Het biedt toegang tot Aquaventure Waterpark, het privéstrand, wereldklasse restaurants en spectaculaire uitzichten over de Arabische Golf.',
+    highlights_nl: [
+      '7 nachten halfpension',
+      'Retourvluchten vanuit Amsterdam',
+      'Privétransfer luchthaven-hotel',
+      'Aquaventure Waterpark dagtoegang',
+      'Privé woestijnsafari (premium)'
+    ],
+    excursions_nl: [
+      { title: 'PRIVÉ WOESTIJNSAFARI (PREMIUM)', desc: 'Een exclusieve overnacht woestijnsafari met luxe glamping, sterrenkijken en een privéchef in de Arabische woestijn.' },
+      { title: 'DUBAI MARINA BOOTTOCHT', desc: 'Een zonsondergangscruise langs de skyline van Dubai Marina aan boord van een privéjacht, inclusief diner.' },
+      { title: 'PALMHELI TOUR', desc: 'Een helikoptervlucht boven Palm Jumeirah en de Dubai skyline voor een onvergetelijk perspectief op de stad.' }
+    ],
+    flightsNote_nl: 'Retourvluchten vanuit Amsterdam (AMS) inbegrepen.',
+    whatsappText_nl: 'Hallo Prestige Travels, ik wil meer weten over het Dubai Elevated pakket.'
   },
   {
     internalId: 'DXB-03',
@@ -178,6 +263,7 @@ const itineraries = [
     flightsNote: 'Business class flights from Amsterdam (AMS) included.',
     cardDescription: 'Unmatched opulence in the world\'s most luxurious hotel with private butler.',
     heroImage: 'https://images.unsplash.com/photo-1546412414-e1885259563a?auto=format&fit=crop&q=80&w=800',
+    hotelImage: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&q=80&w=800',
     resortDescription: 'The Burj Al Arab Jumeirah is the world\'s most iconic luxury hotel. Every duplex suite comes with a private butler, panoramic Arabian Gulf views, and access to a private beach, terrace pool, and the exclusive Summersalt Beach Club.',
     highlights: [
       '7 Nights in a Duplex Suite',
@@ -191,7 +277,23 @@ const itineraries = [
       { title: 'Helicopter City Tour', desc: 'A 25-minute private helicopter tour over Dubai\'s most iconic landmarks including the Burj Khalifa and Palm Jumeirah.' },
       { title: 'Royal Desert Experience', desc: 'A private overnight glamping experience in the desert with stargazing, falconry, and a Michelin-quality dinner.' }
     ],
-    featured: true
+    featured: true,
+    subtitle_nl: 'Ongeëvenaarde weelde in het meest luxueuze hotel ter wereld met een privébutler.',
+    resortDescription_nl: 'Het Burj Al Arab Jumeirah is het enige echte zevensterry-hotel ter wereld, gebouwd op een kunstmatig eiland. Uw privébutler, helikopter-check-in, suites van minimaal 170m² en culinaire ervaringen van wereldniveau maken dit de ultieme luxe-ervaring.',
+    highlights_nl: [
+      '7 nachten volpension met privétransfers',
+      'Business class vluchten vanuit Amsterdam',
+      'Privébutler 24/7',
+      'Helikoptertransfer naar het hotel',
+      'Spa-behandeling voor twee personen'
+    ],
+    excursions_nl: [
+      { title: 'PRIVÉDINEREN OP HET DAKTERRAS', desc: 'Een exclusief diner op het gereserveerde dakterras van het Burj Al Arab, samengesteld door uw privéchef.' },
+      { title: 'DUBAIS GOUDEN SOUK TOUR', desc: 'Een begeleide privétour door de historische souks van Deira, inclusief gepersonaliseerd goudsieraden-atelier bezoek.' },
+      { title: 'ABRA-TOCHT OVER DUBAI CREEK', desc: 'Een romantische zonsondergangsvaart over de historische Dubai Creek in een traditionele houten abra, gevolgd door een diner in Bastakiya.' }
+    ],
+    flightsNote_nl: 'Business class vluchten vanuit Amsterdam (AMS) inbegrepen.',
+    whatsappText_nl: 'Hallo Prestige Travels, ik wil meer weten over het Dubai Pinnacle pakket.'
   },
   {
     internalId: 'HRG-01',
@@ -204,7 +306,8 @@ const itineraries = [
     boardBasis: 'All Inclusive',
     flightsNote: 'Return flights from Amsterdam (AMS) included.',
     cardDescription: 'Relaxing all-inclusive beach holiday with Red Sea snorkeling.',
-    heroImage: 'https://images.unsplash.com/photo-1583217874534-581393fd5325?auto=format&fit=crop&q=80&w=800',
+    heroImage: 'https://images.unsplash.com/photo-1540202404-a2f29016b523?auto=format&fit=crop&q=80&w=800',
+    hotelImage: 'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&q=80&w=800',
     resortDescription: 'Steigenberger Aqua Magic is a family-friendly all-inclusive resort on the Hurghada coastline. With multiple pools, a private sandy beach, water slides, and an on-site reef for snorkeling, it offers outstanding value on the Red Sea.',
     highlights: [
       '7 Nights All Inclusive',
@@ -218,7 +321,23 @@ const itineraries = [
       { title: 'Glass Bottom Boat Tour', desc: 'Explore the vibrant coral reefs and tropical fish without getting wet on a guided glass-bottom boat tour.' },
       { title: 'Quad Bike Desert Safari', desc: 'A 2-hour sunset quad bike safari through the Eastern Desert with Bedouin tea and stargazing.' }
     ],
-    featured: false
+    featured: false,
+    subtitle_nl: 'Ontspannende all-inclusive strandvakantie met snorkelen in de Rode Zee.',
+    resortDescription_nl: 'Steigenberger Aqua Magic is een levendig all-inclusive resort direct aan het strand van Hurghada, met een uitgebreid waterpark, meerdere restaurants en een privéstrand aan de Rode Zee. Ideaal voor ontspanning en wateravontuur.',
+    highlights_nl: [
+      '7 nachten all-inclusive',
+      'Retourvluchten vanuit Amsterdam',
+      'Privétransfer luchthaven-hotel',
+      'Snorkeluitrusting en begeleide rif-tour',
+      'Toegang waterpark'
+    ],
+    excursions_nl: [
+      { title: 'BEGELEIDE RIFF SNORKELTOUR', desc: 'Een begeleide snorkelexcursie naar het House Reef van Hurghada, een van de rijkste koraalgebieden van de Rode Zee.' },
+      { title: 'DAGTRIP LUXOR', desc: 'Een optionele dagtour naar de Vallei der Koningen, de Karnak Tempel en de Colossi van Memnon vanuit Hurghada.' },
+      { title: 'ZONSONDERGANG OP DE RODE ZEE', desc: 'Een ontspannen boottocht bij zonsondergang langs de kust van Hurghada met drankjes en hapjes aan boord.' }
+    ],
+    flightsNote_nl: 'Retourvluchten vanuit Amsterdam (AMS) inbegrepen.',
+    whatsappText_nl: 'Hallo Prestige Travels, ik wil meer weten over het Hurghada Escape pakket.'
   },
   {
     internalId: 'HRG-02',
@@ -232,6 +351,7 @@ const itineraries = [
     flightsNote: 'Return flights from Amsterdam (AMS) included.',
     cardDescription: 'Premium beachfront resort with private boat charter and Luxor day trip.',
     heroImage: 'https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?auto=format&fit=crop&q=80&w=800',
+    hotelImage: 'https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&q=80&w=800',
     resortDescription: 'Rixos Premium Magawish Suites & Villas offers ultra all-inclusive luxury on a private stretch of Red Sea beach. With a world-class spa, multiple à la carte restaurants, and a kids\' club, it suits couples and families alike.',
     highlights: [
       '10 Nights Ultra All Inclusive',
@@ -245,7 +365,23 @@ const itineraries = [
       { title: 'Luxor Day Trip', desc: 'A private guided day trip to Luxor to visit the Valley of the Kings, Karnak Temple, and Hatshepsut Temple.' },
       { title: 'Dolphin House Reef Snorkeling', desc: 'A half-day trip to Sha\'ab El Erg reef, famous for its resident pod of wild spinner dolphins.' }
     ],
-    featured: true
+    featured: true,
+    subtitle_nl: 'Premium strandresort met een privéboottocht en een dagtrip naar Luxor.',
+    resortDescription_nl: 'Rixos Premium Magawish is een exclusief all-inclusive ultra resort op een privéeiland voor de kust van Hurghada. Met meerdere restaurants, een volledig spa-centrum, een privéstrand en een eigen duikcentrum biedt het totale luxe aan de Rode Zee.',
+    highlights_nl: [
+      '10 nachten ultra all-inclusive',
+      'Retourvluchten vanuit Amsterdam',
+      'Privétransfer luchthaven-hotel',
+      'Privé boottocht voor een dag',
+      'Spa-tegoed (1 behandeling per persoon)'
+    ],
+    excursions_nl: [
+      { title: 'PRIVÉ BOOTTOCHT', desc: 'Een hele dag varen op de Rode Zee met een eigen crew, snorkeluitrusting, visuitrusting en een verse vismaaltijd.' },
+      { title: 'DAGTRIP LUXOR', desc: 'Een privé begeleide dagtour naar Luxor met bezoek aan de Vallei der Koningen, de Karnak Tempel en de Tempel van Hatsjepsoet.' },
+      { title: 'DOLPHIN HOUSE SNORKELEN', desc: 'Een halvedaagse snorkeltrip naar Sha\'ab El Erg, beroemd om de residente groep wilde spinnerdolfijnen.' }
+    ],
+    flightsNote_nl: 'Retourvluchten vanuit Amsterdam (AMS) inbegrepen.',
+    whatsappText_nl: 'Hallo Prestige Travels, ik wil meer weten over het Hurghada Azure pakket.'
   },
   {
     internalId: 'HRG-03',
@@ -259,6 +395,7 @@ const itineraries = [
     flightsNote: 'Premium flights from Amsterdam (AMS) included.',
     cardDescription: 'Exclusive suite living with private diving and desert stargazing.',
     heroImage: 'https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&q=80&w=800',
+    hotelImage: 'https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&q=80&w=800',
     resortDescription: 'Set within the exclusive Sahl Hasheesh Bay, this resort offers spacious suites with sea views, a private coral reef just offshore, and beautifully landscaped gardens. Its Prestige package includes premium spirits, private dining, and priority reservations.',
     highlights: [
       '14 Nights in a Sea View Suite',
@@ -272,7 +409,23 @@ const itineraries = [
       { title: 'Desert Stargazing Dinner', desc: 'A private gourmet dinner in the Eastern Desert with a professional astronomer, telescope, and Bedouin campfire.' },
       { title: 'Cairo & Pyramids Overnight', desc: 'A private overnight trip to Cairo including the Pyramids of Giza, the Sphinx, the Egyptian Museum, and a Nile dinner cruise.' }
     ],
-    featured: false
+    featured: false,
+    subtitle_nl: 'Exclusieve suite aan zee met privéduiken en woestijn onder de sterren.',
+    resortDescription_nl: 'Gelegen in de exclusieve Sahl Hasheesh Bay biedt dit resort ruime suites met zeezicht, een privé koraalrif direct voor de kust en prachtig aangelegde tuinen. Het Prestige-pakket omvat premium dranken, privé-dining en prioriteitsreserveringen.',
+    highlights_nl: [
+      '14 nachten in een suite met zeezicht',
+      'All Inclusive Prestige-pakket',
+      'Premium vluchten vanuit Amsterdam',
+      'Privé duiksessies (3 duiken)',
+      'VIP lounge & privé strandcabana'
+    ],
+    excursions_nl: [
+      { title: 'PRIVÉ SCUBADUIKEN', desc: 'Drie persoonlijke scubaduiksessies met een PADI-master instructeur op exclusieve riflocaties, waaronder Abu Ramada en Giftun.' },
+      { title: 'WOESTIJNDINER ONDER DE STERREN', desc: 'Een privé gastronomisch diner in de Oostelijke Woestijn met een professionele sterrenkundige, telescoop en Bedoeïenen kampvuur.' },
+      { title: 'CAÏRO & PIRAMIDES OVERNACHTING', desc: 'Een privé overnachtingsreis naar Caïro inclusief de Piramides van Gizeh, de Sfinx, het Egyptisch Museum en een Nijl-dinercruise.' }
+    ],
+    flightsNote_nl: 'Premium vluchten vanuit Amsterdam (AMS) inbegrepen.',
+    whatsappText_nl: 'Hallo Prestige Travels, ik wil meer weten over het Hurghada Royal pakket.'
   }
 ];
 
@@ -544,7 +697,7 @@ const blogPosts = [
     title: 'How to Pack for a European City Break',
     category: 'Travel Planning',
     excerpt: 'Essential packing tips for a stylish and comfortable trip.',
-    image: 'https://images.unsplash.com/photo-1517736996303-4e64a4f87311?auto=format&fit=crop&q=80&w=800',
+    image: 'https://images.unsplash.com/photo-1553913861-c0fddf2619ee?auto=format&fit=crop&q=80&w=800',
     date: 'March 10, 2026',
     readTime: 4,
     tags: ['Europe', 'Packing Tips', 'Travel Planning', 'City Break'],
@@ -564,7 +717,7 @@ const blogPosts = [
     title: 'Diving in the Red Sea: What to Expect',
     category: 'Destination Guides',
     excerpt: "A beginner's guide to the vibrant reefs of Hurghada.",
-    image: 'https://images.unsplash.com/photo-1562887245-f2fb0b28e672?auto=format&fit=crop&q=80&w=800',
+    image: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&q=80&w=800',
     date: 'March 5, 2026',
     readTime: 6,
     tags: ['Hurghada', 'Diving', 'Red Sea', 'Destination Guide'],
