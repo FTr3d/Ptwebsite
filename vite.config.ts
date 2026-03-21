@@ -1,42 +1,29 @@
-import tailwindcss from '@tailwindcss/vite';
-import react from '@vitejs/plugin-react';
 import path from 'path';
-import {defineConfig, loadEnv} from 'vite';
+import {defineConfig} from 'vite';
 
-export default defineConfig(({mode}) => {
-  const env = loadEnv(mode, '.', '');
-  return {
-    plugins: [react(), tailwindcss()],
-    build: {
-      rollupOptions: {
-        input: {
-          main: path.resolve(__dirname, 'index.html'),
-          itineraries: path.resolve(__dirname, 'itineraries.html'),
-          itinerary: path.resolve(__dirname, 'itinerary.html'),
-          howItWorks: path.resolve(__dirname, 'how-it-works.html'),
-          about: path.resolve(__dirname, 'about.html'),
-          blog: path.resolve(__dirname, 'blog.html'),
-          requestQuote: path.resolve(__dirname, 'request-quote.html'),
-          terms: path.resolve(__dirname, 'terms.html'),
-          privacy: path.resolve(__dirname, 'privacy.html'),
-          post: path.resolve(__dirname, 'post.html'),
-          paymentPlans: path.resolve(__dirname, 'payment-plans.html'),
-          cookies: path.resolve(__dirname, 'cookies.html'),
-        },
-      },
+const pages = [
+  'index', 'itineraries', 'itinerary', 'how-it-works', 'about',
+  'blog', 'request-quote', 'terms', 'privacy', 'post',
+  'payment-plans', 'cookies'
+];
+
+// Build input entries for both /en/ and /nl/ folders
+const input: Record<string, string> = {
+  root: path.resolve(__dirname, 'index.html'),
+};
+for (const lang of ['en', 'nl']) {
+  for (const page of pages) {
+    input[`${lang}_${page}`] = path.resolve(__dirname, `${lang}/${page}.html`);
+  }
+}
+
+export default defineConfig({
+  build: {
+    rollupOptions: { input },
+  },
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, '.'),
     },
-    define: {
-      'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY),
-    },
-    resolve: {
-      alias: {
-        '@': path.resolve(__dirname, '.'),
-      },
-    },
-    server: {
-      // HMR is disabled in AI Studio via DISABLE_HMR env var.
-      // Do not modifyâfile watching is disabled to prevent flickering during agent edits.
-      hmr: process.env.DISABLE_HMR !== 'true',
-    },
-  };
+  },
 });

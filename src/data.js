@@ -518,6 +518,89 @@ const faqs = [
   }
 ];
 
+const blogPosts = [
+  {
+    slug: 'dubai-winter',
+    title: 'The Ultimate Guide to Dubai in Winter',
+    category: 'Destination Guides',
+    excerpt: 'Why November to March is the perfect time to visit the UAE.',
+    image: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&q=80&w=800',
+    date: 'March 16, 2026',
+    readTime: 5,
+    tags: ['Dubai', 'Winter Travel', 'Destination Guide', 'UAE'],
+    content: `<p class="mb-8">Dubai is a city of superlatives, but its summer heat can be overwhelming. That's why the winter months—from November to March—are widely considered the best time to visit. With temperatures hovering between a comfortable 20°C and 28°C, the city truly comes alive, offering the perfect climate for both beach relaxation and desert exploration.</p>
+<h2 style="margin-top: 40px; margin-bottom: 24px;">Perfect Beach Weather</h2>
+<p class="mb-8">During winter, the Arabian Gulf is warm enough for swimming, and the sun is gentle enough for long days lounging at luxury beach clubs. Whether you're staying at the iconic Palm Jumeirah or exploring the vibrant JBR beach, the conditions are flawless.</p>
+<h2 style="margin-top: 40px; margin-bottom: 24px;">Desert Adventures</h2>
+<p class="mb-8">Winter is the only time of year when a desert safari is truly enjoyable. The cooler evenings make for magical nights under the stars at a Bedouin camp, complete with traditional dining and entertainment.</p>
+<blockquote style="border-left: 3px solid var(--color-gold); padding-left: 24px; margin: 40px 0; font-style: italic; font-size: 20px;">
+"Dubai in winter is a completely different city — one where the outdoors becomes your playground and every evening feels like a celebration."
+</blockquote>
+<h2 style="margin-top: 40px; margin-bottom: 24px;">Outdoor Dining and Events</h2>
+<p class="mb-8">Dubai's culinary scene spills outdoors during these months. Rooftop bars, terrace restaurants, and outdoor festivals like the Dubai Shopping Festival (usually held in January) take full advantage of the beautiful weather.</p>`
+  },
+  {
+    slug: 'european-packing',
+    title: 'How to Pack for a European City Break',
+    category: 'Travel Planning',
+    excerpt: 'Essential packing tips for a stylish and comfortable trip.',
+    image: 'https://images.unsplash.com/photo-1517736996303-4e64a4f87311?auto=format&fit=crop&q=80&w=800',
+    date: 'March 10, 2026',
+    readTime: 4,
+    tags: ['Europe', 'Packing Tips', 'Travel Planning', 'City Break'],
+    content: `<p class="mb-8">A European city break calls for versatile packing — you want to look stylish in restaurants and galleries while staying comfortable on cobblestone streets. The key is to pack light, layer smart, and choose pieces that work together.</p>
+<h2 style="margin-top: 40px; margin-bottom: 24px;">Start with a Capsule Wardrobe</h2>
+<p class="mb-8">Choose a neutral colour palette — navy, black, cream, and grey — and build around 3–4 tops, 2 bottoms, and one versatile jacket. Every item should pair with at least two others. This approach keeps your luggage lean without sacrificing variety.</p>
+<h2 style="margin-top: 40px; margin-bottom: 24px;">Footwear Matters</h2>
+<p class="mb-8">Your shoes will make or break the trip. Bring one pair of comfortable walking shoes (leather sneakers work well) and one pair for evenings out. Avoid brand-new shoes — break them in before you travel.</p>
+<blockquote style="border-left: 3px solid var(--color-gold); padding-left: 24px; margin: 40px 0; font-style: italic; font-size: 20px;">
+"The best-dressed travellers are the ones who pack less and choose well."
+</blockquote>
+<h2 style="margin-top: 40px; margin-bottom: 24px;">Tech & Essentials</h2>
+<p class="mb-8">Don't forget a universal adapter, a portable charger, and a reusable water bottle. A small crossbody bag is ideal for day trips — it keeps your hands free and deters pickpockets.</p>`
+  },
+  {
+    slug: 'red-sea-diving',
+    title: 'Diving in the Red Sea: What to Expect',
+    category: 'Destination Guides',
+    excerpt: "A beginner's guide to the vibrant reefs of Hurghada.",
+    image: 'https://images.unsplash.com/photo-1562887245-f2fb0b28e672?auto=format&fit=crop&q=80&w=800',
+    date: 'March 5, 2026',
+    readTime: 6,
+    tags: ['Hurghada', 'Diving', 'Red Sea', 'Destination Guide'],
+    content: `<p class="mb-8">The Red Sea is one of the world's premier diving destinations, and Hurghada sits at the heart of it. With warm, crystal-clear waters, extraordinary coral reefs, and marine life ranging from tiny clownfish to whale sharks, it offers something for every level of diver.</p>
+<h2 style="margin-top: 40px; margin-bottom: 24px;">Why the Red Sea Is Special</h2>
+<p class="mb-8">The Red Sea's unique geography — warm temperatures, high salinity, and minimal river runoff — creates perfect conditions for coral growth. The result is some of the most vibrant and diverse reef systems on the planet, with visibility often exceeding 30 metres.</p>
+<h2 style="margin-top: 40px; margin-bottom: 24px;">Best Sites for Beginners</h2>
+<p class="mb-8">Giftun Island is the go-to spot for first-time divers and snorkellers. The sheltered bays offer calm waters and shallow reefs teeming with colour. For a more immersive experience, Sha'ab El Erg (Dolphin House) is famous for its resident pod of spinner dolphins.</p>
+<blockquote style="border-left: 3px solid var(--color-gold); padding-left: 24px; margin: 40px 0; font-style: italic; font-size: 20px;">
+"There's nothing quite like your first breath underwater on a Red Sea reef — it's a moment that stays with you forever."
+</blockquote>
+<h2 style="margin-top: 40px; margin-bottom: 24px;">Practical Tips</h2>
+<p class="mb-8">Most resorts in Hurghada have on-site dive centres with PADI-certified instructors. A Discover Scuba session takes about 3 hours and includes a theory briefing, pool practice, and a guided reef dive. No prior certification is needed.</p>`
+  },
+  {
+    slug: 'santorini-beyond-sunsets',
+    title: 'Santorini: Beyond the Sunsets',
+    category: 'Travel Planning',
+    excerpt: 'Exploring the hidden villages and local flavors of the island.',
+    image: 'https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&q=80&w=800',
+    date: 'February 28, 2026',
+    readTime: 5,
+    tags: ['Santorini', 'Greece', 'Travel Planning', 'Islands'],
+    content: `<p class="mb-8">Santorini is famous for its caldera views and fiery sunsets, but the island has so much more to offer beyond the Instagram spots. Step away from Oia's crowded viewpoints and you'll discover a quieter, more authentic side of this volcanic island.</p>
+<h2 style="margin-top: 40px; margin-bottom: 24px;">The Hidden Villages</h2>
+<p class="mb-8">Pyrgos, perched on the island's highest point, offers panoramic views without the crowds. Its medieval castle ruins and winding alleyways are a photographer's dream. Megalochori is another gem — a traditional wine village where time seems to stand still.</p>
+<h2 style="margin-top: 40px; margin-bottom: 24px;">Wine and Gastronomy</h2>
+<p class="mb-8">Santorini's volcanic soil produces some of Greece's finest wines, particularly the crisp Assyrtiko. Visit a local winery like Santo Wines or Venetsanos for tastings with caldera views. Pair it with fava (yellow split pea purée), white aubergine, and cherry tomatoes — all local specialities.</p>
+<blockquote style="border-left: 3px solid var(--color-gold); padding-left: 24px; margin: 40px 0; font-style: italic; font-size: 20px;">
+"Santorini rewards the curious traveller — the ones who wander past the postcard views and into the heart of the island."
+</blockquote>
+<h2 style="margin-top: 40px; margin-bottom: 24px;">Red Beach and Akrotiri</h2>
+<p class="mb-8">The ancient Minoan settlement of Akrotiri, often called the 'Pompeii of the Aegean', is a must-visit. Just nearby, Red Beach stuns with its dramatic crimson cliffs against turquoise water. Visit early in the morning to have it almost to yourself.</p>`
+  }
+];
+
 // Helper to map tiers
 function getTierDisplay(tier) {
   const map = {
@@ -529,4 +612,4 @@ function getTierDisplay(tier) {
 }
 
 // Export for use in app.js
-window.PT_DATA = { destinations, itineraries, faqs, getTierDisplay };
+window.PT_DATA = { destinations, itineraries, faqs, blogPosts, getTierDisplay };
