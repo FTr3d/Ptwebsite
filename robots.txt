@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://<!-- UPDATE WITH REAL DOMAIN -->/sitemap.xml
+Sitemap: https://prestige-travels.nl/sitemap.xml
