@@ -27,6 +27,15 @@ const destinations = [
     heroImage: 'https://images.unsplash.com/photo-1562887245-f2fb0b28e672?auto=format&fit=crop&q=80&w=1920',
     shortDescription: 'Pristine coral reefs, warm azure waters, and world-class all-inclusive resorts.',
     featured: true
+  },
+  {
+    id: 'dest-4',
+    name: 'Santorini',
+    slug: 'santorini',
+    tagline: 'Caldera Views, Clifftop Luxury',
+    heroImage: 'https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&q=80&w=1920',
+    shortDescription: 'Iconic whitewashed villages, volcanic beaches, and some of the most spectacular sunsets in the world.',
+    featured: true
   }
 ];
 
