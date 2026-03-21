@@ -355,7 +355,7 @@ function renderItineraryDetail() {
         <div class="mb-16">
           <h2 data-i18n="itinerary.stayTitle">Where you'll stay</h2>
           <div style="display: grid; grid-template-columns: 1fr; gap: 40px; align-items: center;">
-            <img src="${itin.hotelImage || itin.heroImage}" alt="${itin.resortHotel}" style="width: 100%; height: 400px; object-fit: cover;">
+            <img src="${itin.hotelImage || itin.heroImage}" alt="${itin.resortHotel}" loading="lazy" style="width: 100%; height: 400px; object-fit: cover;" onerror="this.src='https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&q=80'">
             <div>
               <h3 style="margin-bottom: 16px;">${itin.resortHotel}</h3>
               <p>${hotelDesc}</p>
