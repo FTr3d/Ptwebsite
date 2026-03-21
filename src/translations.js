@@ -328,6 +328,7 @@ const translations = {
 
     // ── Common ──
     common: {
+      tagline: 'Global Journeys. Personal Touch.',
       chatOnWhatsApp: 'Chat on WhatsApp',
       chatWithUs: 'Chat with us',
       readyWhenYouAre: 'Ready when you are.',
@@ -679,6 +680,7 @@ const translations = {
 
     // ── Algemeen ──
     common: {
+      tagline: 'Wereldreizen. Persoonlijke touch.',
       chatOnWhatsApp: 'Chat via WhatsApp',
       chatWithUs: 'Chat met ons',
       readyWhenYouAre: 'Klaar wanneer u bent.',

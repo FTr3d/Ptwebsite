@@ -6,8 +6,10 @@ const destinations = [
     name: 'Amsterdam',
     slug: 'amsterdam',
     tagline: 'Culture, Canals & Cosmopolitan Luxury',
+    tagline_nl: 'Cultuur, grachten & kosmopolitische luxe',
     heroImage: 'https://images.unsplash.com/photo-1534351590666-13e3e96b5017?auto=format&fit=crop&q=80&w=1920',
     shortDescription: 'A city of golden-age architecture, world-class museums, and intimate canal-side dining.',
+    shortDescription_nl: 'Een stad van Gouden Eeuw-architectuur, wereldberoemde musea en intiem dineren aan de gracht.',
     featured: true
   },
   {
@@ -15,8 +17,10 @@ const destinations = [
     name: 'Dubai',
     slug: 'dubai',
     tagline: 'Skyline, Desert & Modern Extravagance',
+    tagline_nl: 'Skyline, woestijn & moderne extravagantie',
     heroImage: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&q=80&w=1920',
     shortDescription: 'Iconic towers, private beach clubs, and a desert landscape unlike anywhere else on Earth.',
+    shortDescription_nl: 'Iconische torens, privébeachclubs en een woestijnlandschap zoals nergens anders ter wereld.',
     featured: true
   },
   {
@@ -24,8 +28,10 @@ const destinations = [
     name: 'Hurghada',
     slug: 'hurghada',
     tagline: 'Red Sea Reefs, All-Inclusive Luxury',
+    tagline_nl: 'Rode Zee-riffen & all-inclusive luxe',
     heroImage: 'https://images.unsplash.com/photo-1562887245-f2fb0b28e672?auto=format&fit=crop&q=80&w=1920',
     shortDescription: 'Pristine coral reefs, warm azure waters, and world-class all-inclusive resorts.',
+    shortDescription_nl: 'Ongerepte koraalriffen, warm azuurblauw water en all-inclusive resorts van wereldklasse.',
     featured: true
   },
   {
@@ -33,8 +39,10 @@ const destinations = [
     name: 'Santorini',
     slug: 'santorini',
     tagline: 'Caldera Views, Clifftop Luxury',
+    tagline_nl: 'Calderazichten & luxe op de kliffen',
     heroImage: 'https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&q=80&w=1920',
     shortDescription: 'Iconic whitewashed villages, volcanic beaches, and some of the most spectacular sunsets in the world.',
+    shortDescription_nl: 'Iconische witgekalkte dorpen, vulkanische stranden en enkele van de meest spectaculaire zonsondergangen ter wereld.',
     featured: true
   }
 ];
@@ -579,30 +587,40 @@ const faqs = [
     id: 'H-1',
     question: 'Do you have a booking engine?',
     answer: 'No — and intentionally so. Every trip is built by a human advisor, not an algorithm. Use our quote form or WhatsApp to get started.',
+    question_nl: 'Heeft u een boekingssysteem?',
+    answer_nl: 'Nee, en dat is bewust. Elke reis wordt samengesteld door een persoonlijke adviseur, niet door een algoritme. Gebruik ons offerteformulier of WhatsApp om te beginnen.',
     tag: 'home'
   },
   {
     id: 'H-2',
     question: 'How quickly will you respond to a quote request?',
     answer: 'Within 24 hours on working days. WhatsApp responses are typically faster — most clients hear back the same day.',
+    question_nl: 'Hoe snel reageren jullie op een offerteverzoek?',
+    answer_nl: 'Binnen 24 uur op werkdagen. WhatsApp-reacties zijn doorgaans sneller. De meeste klanten horen dezelfde dag nog van ons.',
     tag: 'home'
   },
   {
     id: 'H-3',
     question: 'Is Prestige Travels a registered travel agency?',
     answer: 'Yes. Prestige Travels is registered with the Dutch Chamber of Commerce (KvK: 97890677) and operates in full compliance with Dutch consumer travel regulations and the EU Package Travel Directive.',
+    question_nl: 'Is Prestige Travels een geregistreerd reisbureau?',
+    answer_nl: 'Ja. Prestige Travels is ingeschreven bij de Kamer van Koophandel (KvK: 97890677) en werkt volledig in overeenstemming met de Nederlandse consumentenreisregelgeving en de Europese Richtlijn Pakketreizen.',
     tag: 'home'
   },
   {
     id: 'H-4',
     question: 'Which destinations do you currently offer?',
     answer: 'Our MVP launch focuses on Amsterdam, Dubai, and Hurghada — three destinations our team knows inside out. We plan to expand to additional destinations based on client demand.',
+    question_nl: 'Welke bestemmingen bieden jullie momenteel aan?',
+    answer_nl: 'Onze lancering richt zich op Amsterdam, Dubai en Hurghada, drie bestemmingen die ons team door en door kent. We zijn van plan uit te breiden op basis van de vraag van onze klanten.',
     tag: 'home'
   },
   {
     id: 'H-5',
     question: 'Can you arrange a trip to a destination not listed on your website?',
     answer: 'Absolutely. Our itineraries are starting points. If you have a specific destination in mind, contact us and we will design a bespoke proposal tailored to your wishes.',
+    question_nl: 'Kunnen jullie een reis naar een bestemming regelen die niet op de website staat?',
+    answer_nl: 'Absoluut. Onze reisroutes zijn vertrekpunten. Als u een specifieke bestemming in gedachten heeft, neem dan contact met ons op en wij stellen een voorstel op maat samen.',
     tag: 'home'
   },
 
@@ -611,42 +629,56 @@ const faqs = [
     id: 'W-1',
     question: 'How does the quote process work?',
     answer: 'You fill in our quote form or contact us via WhatsApp. Your advisor reviews your request and sends a personalised proposal within 24 hours — including itinerary, pricing, and payment schedule.',
+    question_nl: 'Hoe werkt het offerteproces?',
+    answer_nl: 'U vult ons offerteformulier in of neemt contact op via WhatsApp. Uw adviseur beoordeelt uw aanvraag en stuurt binnen 24 uur een persoonlijk voorstel, inclusief reisroute, prijzen en betalingsschema.',
     tag: 'how-it-works'
   },
   {
     id: 'W-2',
     question: 'Is the quote free and non-binding?',
     answer: 'Completely. There is no obligation until you confirm with a deposit. We will never pressure you to commit.',
+    question_nl: 'Is de offerte gratis en vrijblijvend?',
+    answer_nl: 'Volledig. Er is geen verplichting totdat u bevestigt met een aanbetaling. Wij zullen u nooit onder druk zetten om te bevestigen.',
     tag: 'how-it-works'
   },
   {
     id: 'W-3',
     question: 'How do payments work?',
     answer: 'Typically 25% deposit to confirm, with the remaining balance spread across milestones leading up to departure. All payment schedules are confirmed in writing per booking.',
+    question_nl: 'Hoe werken de betalingen?',
+    answer_nl: 'Meestal 25% aanbetaling ter bevestiging, met het resterende bedrag verspreid over mijlpalen tot aan vertrek. Alle betalingsschema\'s worden per boeking schriftelijk bevestigd.',
     tag: 'how-it-works'
   },
   {
     id: 'W-4',
     question: 'Are there any hidden fees?',
     answer: 'No. Our pricing is completely transparent. The quote you receive is the final price you pay — no booking fees, no admin charges, no surprises.',
+    question_nl: 'Zijn er verborgen kosten?',
+    answer_nl: 'Nee. Onze prijzen zijn volledig transparant. De offerte die u ontvangt is de uiteindelijke prijs, zonder boekingskosten, administratiekosten of verrassingen.',
     tag: 'how-it-works'
   },
   {
     id: 'W-5',
     question: 'Can I make changes after receiving my proposal?',
     answer: 'Of course. Unlimited revisions are included at no extra charge before you confirm your booking. We want you to be completely happy with every detail.',
+    question_nl: 'Kan ik wijzigingen aanbrengen na ontvangst van het voorstel?',
+    answer_nl: 'Natuurlijk. Onbeperkte aanpassingen zijn kosteloos inbegrepen voordat u uw boeking bevestigt. Wij willen dat u volledig tevreden bent met elk detail.',
     tag: 'how-it-works'
   },
   {
     id: 'W-6',
     question: 'How long does it take to finalise a booking?',
     answer: 'Most bookings are finalised within 3–5 days of the initial enquiry. Complex multi-destination trips may take a little longer, but your advisor will keep you informed at every step.',
+    question_nl: 'Hoe lang duurt het om een boeking af te ronden?',
+    answer_nl: 'De meeste boekingen worden binnen 3 tot 5 dagen na de eerste aanvraag afgerond. Complexe reizen naar meerdere bestemmingen kunnen iets langer duren, maar uw adviseur houdt u bij elke stap op de hoogte.',
     tag: 'how-it-works'
   },
   {
     id: 'W-7',
     question: 'What is included in every Prestige Travels booking?',
     answer: 'Every booking includes a dedicated travel advisor, a fully detailed itinerary document, 24/7 WhatsApp support during your trip, and all arrangements confirmed in writing before you travel.',
+    question_nl: 'Wat is inbegrepen bij elke Prestige Travels-boeking?',
+    answer_nl: 'Elke boeking omvat een vaste reisadviseur, een volledig gedetailleerd reisdocument, 24/7 WhatsApp-ondersteuning tijdens uw reis en alle afspraken schriftelijk bevestigd voordat u vertrekt.',
     tag: 'how-it-works'
   },
 
@@ -655,36 +687,48 @@ const faqs = [
     id: 'PP-1',
     question: 'What is the minimum deposit to secure a booking?',
     answer: 'For departures more than 3 months away, the deposit is 25% of the total travel sum. For departures under 3 months, a 50% deposit is required. Bookings within 28 days of departure require full payment.',
+    question_nl: 'Wat is de minimale aanbetaling om een boeking te bevestigen?',
+    answer_nl: 'Voor vertrek meer dan 3 maanden van tevoren bedraagt de aanbetaling 25% van de totale reissom. Voor vertrek binnen 3 maanden is 50% aanbetaling vereist. Boekingen binnen 28 dagen voor vertrek vereisen volledige betaling.',
     tag: 'payment-plans'
   },
   {
     id: 'PP-2',
     question: 'Is there interest or admin fees on payment plans?',
     answer: 'No. Our payment plans are completely interest-free with no admin fees. The price you are quoted is the price you pay, regardless of how many milestones your payments are split across.',
+    question_nl: 'Zijn er rente of administratiekosten op betalingsplannen?',
+    answer_nl: 'Nee. Onze betalingsplannen zijn volledig rentevrij zonder administratiekosten. De prijs die u geoffreerd krijgt is de prijs die u betaalt, ongeacht het aantal termijnen.',
     tag: 'payment-plans'
   },
   {
     id: 'PP-3',
     question: 'What happens if I miss a payment milestone?',
     answer: 'Your advisor will contact you proactively. A 14-day grace period applies from the original due date. Repeated non-payment beyond the grace period may, in rare cases, result in the booking being released.',
+    question_nl: 'Wat gebeurt er als ik een betalingsmijlpaal mis?',
+    answer_nl: 'Uw adviseur neemt proactief contact met u op. Er geldt een coulanceperiode van 14 dagen vanaf de oorspronkelijke vervaldatum. Herhaalde niet-betaling na de coulanceperiode kan in uitzonderlijke gevallen leiden tot het vrijgeven van de boeking.',
     tag: 'payment-plans'
   },
   {
     id: 'PP-4',
     question: 'Can I pay the full amount upfront instead?',
     answer: 'Yes. You are welcome to pay the full travel sum at any time. The payment plan is simply an option we offer — there is no obligation to use it.',
+    question_nl: 'Kan ik het volledige bedrag in één keer betalen?',
+    answer_nl: 'Ja. U kunt de volledige reissom op elk moment betalen. Het betalingsplan is simpelweg een optie die wij bieden, er is geen verplichting om het te gebruiken.',
     tag: 'payment-plans'
   },
   {
     id: 'PP-5',
     question: 'What payment methods do you accept?',
     answer: 'We accept bank transfer (SEPA), credit card, and iDEAL. All payment details and instructions are included in your booking confirmation.',
+    question_nl: 'Welke betaalmethoden accepteren jullie?',
+    answer_nl: 'Wij accepteren bankoverschrijving (SEPA), creditcard en iDEAL. Alle betalingsgegevens en instructies zijn opgenomen in uw boekingsbevestiging.',
     tag: 'payment-plans'
   },
   {
     id: 'PP-6',
     question: 'Is everyone eligible for a payment plan?',
     answer: 'Payment plans are offered at our discretion and are subject to approval per booking. This will always be communicated clearly before you confirm your booking. We reserve the right to decline or withdraw a payment plan.',
+    question_nl: 'Komt iedereen in aanmerking voor een betalingsplan?',
+    answer_nl: 'Betalingsplannen worden naar eigen inzicht aangeboden en zijn onderhevig aan goedkeuring per boeking. Dit wordt altijd duidelijk gecommuniceerd voordat u uw boeking bevestigt. Wij behouden ons het recht voor een betalingsplan te weigeren of in te trekken.',
     tag: 'payment-plans'
   },
 
@@ -693,48 +737,64 @@ const faqs = [
     id: 'I-1',
     question: 'Can I customise one of your listed itineraries?',
     answer: 'Absolutely. Every itinerary on our website is a starting point. Your advisor will tailor it to your exact preferences — different hotels, longer stays, extra excursions, dietary requirements, you name it.',
+    question_nl: 'Kan ik een van de vermelde reisroutes aanpassen?',
+    answer_nl: 'Absoluut. Elke reisroute op onze website is een vertrekpunt. Uw adviseur stemt deze af op uw exacte voorkeuren: andere hotels, langere verblijven, extra excursies, dieetwensen, noem het maar.',
     tag: 'itineraries'
   },
   {
     id: 'I-2',
     question: 'What do the tier levels (Curated, Premier, Prestige) mean?',
     answer: 'Our tiers reflect the level of luxury and inclusions. Curated offers excellent quality and value. Premier adds upgraded hotels and exclusive experiences. Prestige is our top tier with the finest hotels, private transfers, and VIP access.',
+    question_nl: 'Wat betekenen de categorieniveaus (Curated, Premier, Prestige)?',
+    answer_nl: 'Onze categorie\u00ebn weerspiegelen het niveau van luxe en inclusies. Curated biedt uitstekende kwaliteit en waarde. Premier voegt ge\u00fcpgrade hotels en exclusieve ervaringen toe. Prestige is ons topniveau met de finest hotels, priv\u00e9transfers en VIP-toegang.',
     tag: 'itineraries'
   },
   {
     id: 'I-3',
     question: 'Are flights always included?',
     answer: 'It depends on the itinerary. Amsterdam packages do not include flights (since most clients are local). Dubai and Hurghada packages include return flights from Amsterdam Schiphol (AMS). This is clearly noted on each itinerary.',
+    question_nl: 'Zijn vluchten altijd inbegrepen?',
+    answer_nl: 'Dat hangt af van de reisroute. Amsterdam-pakketten bevatten geen vluchten (aangezien de meeste klanten lokaal zijn). Dubai- en Hurghada-pakketten bevatten retourvluchten vanuit Amsterdam Schiphol (AMS). Dit staat duidelijk vermeld bij elke reisroute.',
     tag: 'itineraries'
   },
   {
     id: 'I-4',
     question: 'Can I book for a group or family?',
     answer: 'Yes. Our itineraries can be adapted for couples, families, and groups. Tell us how many travellers and any specific requirements (child-friendly hotels, interconnecting rooms, etc.) and we will adjust the proposal accordingly.',
+    question_nl: 'Kan ik boeken voor een groep of gezin?',
+    answer_nl: 'Ja. Onze reisroutes kunnen worden aangepast voor koppels, gezinnen en groepen. Vertel ons het aantal reizigers en eventuele specifieke wensen (kindvriendelijke hotels, aangrenzende kamers, etc.) en wij passen het voorstel daarop aan.',
     tag: 'itineraries'
   },
   {
     id: 'I-5',
     question: 'Do prices change depending on the season?',
     answer: 'Yes. Prices on our website reflect starting rates and may vary based on travel dates, availability, and seasonal demand. Your advisor will provide exact pricing based on your preferred dates.',
+    question_nl: 'Veranderen de prijzen afhankelijk van het seizoen?',
+    answer_nl: 'Ja. De prijzen op onze website zijn vanafprijzen en kunnen vari\u00ebren op basis van reisdata, beschikbaarheid en seizoensvraag. Uw adviseur geeft u exacte prijzen op basis van uw voorkeursdata.',
     tag: 'itineraries'
   },
   {
     id: 'I-6',
     question: 'Can I upgrade my hotel or add extra nights?',
     answer: 'Of course. Upgrades, extensions, and add-ons are always available. Let your advisor know your preferences and they will include the options and pricing in your proposal.',
+    question_nl: 'Kan ik mijn hotel upgraden of extra nachten toevoegen?',
+    answer_nl: 'Natuurlijk. Upgrades, verlengingen en extra\'s zijn altijd mogelijk. Laat uw adviseur uw voorkeuren weten en deze worden met prijsopties opgenomen in uw voorstel.',
     tag: 'itineraries'
   },
   {
     id: 'I-7',
     question: 'Do you arrange visas or travel documents?',
     answer: 'We provide guidance on visa requirements for your destination and can recommend visa services. However, it remains the traveller\'s responsibility to ensure they have valid travel documents before departure.',
+    question_nl: 'Regelen jullie visa of reisdocumenten?',
+    answer_nl: 'Wij bieden begeleiding bij visumvereisten voor uw bestemming en kunnen visumdiensten aanbevelen. Het blijft echter de verantwoordelijkheid van de reiziger om geldige reisdocumenten te hebben voor vertrek.',
     tag: 'itineraries'
   },
   {
     id: 'I-8',
     question: 'Is travel insurance included?',
     answer: 'Travel insurance is not included in our packages but is strongly recommended. We can advise on suitable policies and providers. Some credit cards also offer travel insurance — check with your bank.',
+    question_nl: 'Is een reisverzekering inbegrepen?',
+    answer_nl: 'Een reisverzekering is niet inbegrepen in onze pakketten, maar wordt sterk aanbevolen. Wij kunnen u adviseren over geschikte polissen en aanbieders. Sommige creditcards bieden ook reisverzekeringen aan. Controleer dit bij uw bank.',
     tag: 'itineraries'
   },
 
@@ -743,36 +803,48 @@ const faqs = [
     id: 'T-1',
     question: 'Do I need a visa for Dubai or Egypt?',
     answer: 'EU/EEA passport holders receive a visa on arrival in both the UAE and Egypt. For other nationalities, requirements vary. Your advisor will confirm the specific visa requirements based on your passport.',
+    question_nl: 'Heb ik een visum nodig voor Dubai of Egypte?',
+    answer_nl: 'Houders van een EU/EER-paspoort ontvangen bij aankomst een visum in zowel de VAE als Egypte. Voor andere nationaliteiten gelden andere vereisten. Uw adviseur bevestigt de specifieke visumvereisten op basis van uw paspoort.',
     tag: 'travel-info'
   },
   {
     id: 'T-2',
     question: 'Are any vaccinations required?',
     answer: 'No mandatory vaccinations are currently required for Amsterdam, Dubai, or Hurghada for most travellers. We recommend checking the latest advice from your GP or the RIVM (Dutch National Institute for Public Health) before travelling.',
+    question_nl: 'Zijn er vaccinaties vereist?',
+    answer_nl: 'Er zijn momenteel geen verplichte vaccinaties vereist voor Amsterdam, Dubai of Hurghada voor de meeste reizigers. Wij raden aan het laatste advies van uw huisarts of het RIVM te raadplegen voor vertrek.',
     tag: 'travel-info'
   },
   {
     id: 'T-3',
     question: 'How do airport transfers work?',
     answer: 'Where transfers are included, a driver will meet you at arrivals with a name sign. Transfer details and driver contact information are shared via WhatsApp before you land.',
+    question_nl: 'Hoe werken de luchthaventransfers?',
+    answer_nl: 'Wanneer transfers zijn inbegrepen, staat een chauffeur u op te wachten bij de aankomsthal met een naambord. Transfergegevens en contactinformatie van de chauffeur worden voor landing via WhatsApp gedeeld.',
     tag: 'travel-info'
   },
   {
     id: 'T-4',
     question: 'What is the baggage allowance?',
     answer: 'Baggage allowances depend on the airline and fare class. Your booking confirmation will include full details. Most packages include 23kg checked luggage plus a cabin bag.',
+    question_nl: 'Wat is de bagagetoelage?',
+    answer_nl: 'Bagagetoelagen zijn afhankelijk van de luchtvaartmaatschappij en tariefklasse. Uw boekingsbevestiging bevat alle details. De meeste pakketten omvatten 23 kg ruimbagage plus een handbagage.',
     tag: 'travel-info'
   },
   {
     id: 'T-5',
     question: 'What currency should I bring?',
     answer: 'Amsterdam uses Euros (€), Dubai uses Dirhams (AED), and Hurghada uses Egyptian Pounds (EGP). Credit cards are widely accepted in all three destinations. Your advisor will provide currency tips in your pre-departure guide.',
+    question_nl: 'Welke valuta moet ik meenemen?',
+    answer_nl: 'Amsterdam gebruikt Euro\'s (\u20ac), Dubai gebruikt Dirhams (AED) en Hurghada gebruikt Egyptische ponden (EGP). Creditcards worden op alle drie bestemmingen breed geaccepteerd. Uw adviseur geeft valutatips in uw vertrekgids.',
     tag: 'travel-info'
   },
   {
     id: 'T-6',
     question: 'What happens if my flight is delayed or cancelled?',
     answer: 'Your advisor monitors your flights and will proactively reach out if there are disruptions. We will coordinate with the airline and your hotel to adjust transfers and check-in times as needed.',
+    question_nl: 'Wat gebeurt er als mijn vlucht vertraagd of geannuleerd wordt?',
+    answer_nl: 'Uw adviseur houdt uw vluchten in de gaten en neemt proactief contact op bij verstoringen. Wij co\u00f6rdineren met de luchtvaartmaatschappij en uw hotel om transfers en inchecktijden aan te passen.',
     tag: 'travel-info'
   },
 
@@ -781,36 +853,48 @@ const faqs = [
     id: 'G-1',
     question: 'How do I contact Prestige Travels?',
     answer: 'You can reach us via WhatsApp at +31 6 57196097, email at info@prestigetravels.nl, or through the quote form on our website. WhatsApp is the fastest way to reach us.',
+    question_nl: 'Hoe kan ik contact opnemen met Prestige Travels?',
+    answer_nl: 'U kunt ons bereiken via WhatsApp op +31 6 57196097, e-mail op info@prestige-travels.nl of via het offerteformulier op onze website. WhatsApp is de snelste manier om ons te bereiken.',
     tag: 'general'
   },
   {
     id: 'G-2',
     question: 'How large is the Prestige Travels team?',
     answer: 'We are a small, dedicated team — and that is intentional. Every client is personally looked after by a senior advisor. We do not outsource or use call centres.',
+    question_nl: 'Hoe groot is het Prestige Travels-team?',
+    answer_nl: 'Wij zijn een klein, toegewijd team, en dat is bewust. Elke klant wordt persoonlijk begeleid door een senior adviseur. Wij besteden niet uit en maken geen gebruik van callcenters.',
     tag: 'general'
   },
   {
     id: 'G-3',
     question: 'Do you speak languages other than English?',
     answer: 'Yes. Our team speaks Dutch, English, and Arabic. We are happy to communicate in whichever language you prefer.',
+    question_nl: 'Spreken jullie andere talen dan Nederlands?',
+    answer_nl: 'Ja. Ons team spreekt Nederlands, Engels en Arabisch. Wij communiceren graag in de taal van uw voorkeur.',
     tag: 'general'
   },
   {
     id: 'G-4',
     question: 'What are your office hours?',
     answer: 'Our standard hours are Monday to Friday, 9:00–18:00 CET. WhatsApp messages outside these hours are read and responded to as soon as possible the next working day.',
+    question_nl: 'Wat zijn jullie kantooruren?',
+    answer_nl: 'Onze standaard openingstijden zijn maandag tot en met vrijdag, 9:00-18:00 CET. WhatsApp-berichten buiten deze uren worden gelezen en zo snel mogelijk de volgende werkdag beantwoord.',
     tag: 'general'
   },
   {
     id: 'G-5',
     question: 'Do you have a sustainability policy?',
     answer: 'We are committed to responsible travel. We work with locally owned suppliers where possible, recommend carbon offset programmes, and avoid promoting activities that exploit animals or damage ecosystems.',
+    question_nl: 'Hebben jullie een duurzaamheidsbeleid?',
+    answer_nl: 'Wij zetten ons in voor verantwoord reizen. Wij werken waar mogelijk met lokale leveranciers, bevelen CO2-compensatieprogramma\'s aan en promoten geen activiteiten die dieren uitbuiten of ecosystemen beschadigen.',
     tag: 'general'
   },
   {
     id: 'G-6',
     question: 'How do I make a complaint?',
     answer: 'We take complaints seriously. Email info@prestigetravels.nl with the subject line "Complaint" and your booking reference. We aim to acknowledge complaints within 24 hours and resolve them within 14 working days.',
+    question_nl: 'Hoe dien ik een klacht in?',
+    answer_nl: 'Wij nemen klachten serieus. E-mail info@prestige-travels.nl met als onderwerp "Klacht" en uw boekingsreferentie. Wij streven ernaar klachten binnen 24 uur te bevestigen en binnen 14 werkdagen op te lossen.',
     tag: 'general'
   }
 ];
@@ -834,7 +918,20 @@ const blogPosts = [
 "We came for the skyline and stayed for the desert. That one evening under the stars changed how we think about Dubai."
 </blockquote>
 <h2 style="margin-top: 40px; margin-bottom: 24px;">Outdoor Dining and Events</h2>
-<p class="mb-8">Dubai's restaurant scene shifts outdoors in winter. Rooftop bars open their terraces, hotel restaurants set up garden seating, and the Dubai Shopping Festival in January brings street food markets, live music, and late-night souk events. If you like eating well and being outside, this is your season.</p>`
+<p class="mb-8">Dubai's restaurant scene shifts outdoors in winter. Rooftop bars open their terraces, hotel restaurants set up garden seating, and the Dubai Shopping Festival in January brings street food markets, live music, and late-night souk events. If you like eating well and being outside, this is your season.</p>`,
+    title_nl: 'De ultieme gids voor Dubai in de winter',
+    category_nl: 'Bestemmingsgidsen',
+    excerpt_nl: 'November tot maart brengt warme dagen, koele avonden en Dubai op zijn best.',
+    content_nl: `<p class="mb-8">Wij sturen meer klanten naar Dubai tussen november en maart dan in welke andere periode dan ook, en dat is niet zonder reden. Zomertemperaturen komen regelmatig boven de 45°C, wat zelfs een wandeling naar het hotelzwembad tot een beproeving maakt. Maar van de late herfst tot het vroege voorjaar krijgt u warme dagen rond 24°C, koele avonden en een stad die naar buiten trekt.</p>
+<h2 style="margin-top: 40px; margin-bottom: 24px;">Perfect strandweer</h2>
+<p class="mb-8">De Perzische Golf heeft een comfortabele zwemtemperatuur en de zon is sterk genoeg voor een bruine tint zonder dat u in twintig minuten verbrandt. Wij zijn dol op JBR beach voor gezinnen en de rustigere stukken bij Al Sufouh voor koppels. De beachclubs van Palm Jumeirah zijn op hun best in januari en februari.</p>
+<h2 style="margin-top: 40px; margin-bottom: 24px;">Woestijnavonturen</h2>
+<p class="mb-8">Woestijnsafari's in de zomer zijn ondraaglijk. In de winter zijn ze spectaculair. Het zand koelt af na zonsondergang, de hemel vult zich met sterren en een diner in Bedoeïenenstijl bij 18°C is een van de meest onvergetelijke avonden die u in de VAE kunt beleven.</p>
+<blockquote style="border-left: 3px solid var(--color-gold); padding-left: 24px; margin: 40px 0; font-style: italic; font-size: 20px;">
+"We kwamen voor de skyline en bleven voor de woestijn. Die ene avond onder de sterren heeft onze kijk op Dubai veranderd."
+</blockquote>
+<h2 style="margin-top: 40px; margin-bottom: 24px;">Buiten dineren en evenementen</h2>
+<p class="mb-8">De restaurantscene van Dubai verplaatst zich in de winter naar buiten. Rooftopbars openen hun terrassen, hotelrestaurants zetten tuinstoelen neer en het Dubai Shopping Festival in januari brengt streetfoodmarkten, livemuziek en nachtelijke soukevenementen. Als u graag lekker eet en buiten bent, is dit uw seizoen.</p>`
   },
   {
     slug: 'european-packing',
@@ -854,7 +951,20 @@ const blogPosts = [
 "Our best-travelled clients all have one thing in common: a small suitcase and zero packing regret."
 </blockquote>
 <h2 style="margin-top: 40px; margin-bottom: 24px;">Tech and Essentials</h2>
-<p class="mb-8">A universal adapter, a portable charger, and a reusable water bottle. Those three items solve 90% of travel annoyances. For daytime, a small crossbody bag keeps your hands free and sits close to your body in crowded streets.</p>`
+<p class="mb-8">A universal adapter, a portable charger, and a reusable water bottle. Those three items solve 90% of travel annoyances. For daytime, a small crossbody bag keeps your hands free and sits close to your body in crowded streets.</p>`,
+    title_nl: 'Inpakken voor een Europese stedentrip',
+    category_nl: 'Reisplanning',
+    excerpt_nl: 'Pak licht in, kleed u in lagen en vermijd inpakspijt. Dit is wat wij elke klant adviseren.',
+    content_nl: `<p class="mb-8">We krijgen vaker vragen over inpakken dan over bijna wat dan ook. Europese stedentrips hebben een specifieke uitdaging: u wilt er goed uitzien bij het diner, comfortabel lopen over kinderkopjes en niet met een enorme koffer door smalle hotelgangen sjouwen. Dit is de aanpak die wij elke klant aanbevelen.</p>
+<h2 style="margin-top: 40px; margin-bottom: 24px;">Begin met een capsulegarderobe</h2>
+<p class="mb-8">Kies een neutrale basis. Navy, zwart, crème en grijs passen allemaal goed bij elkaar. Pak 3 tot 4 tops in, 2 broeken of rokken en één jas die zowel in een museum als op een rooftopbar werkt. Elk kledingstuk moet met minstens twee andere combineerbaar zijn. U zult verbaasd zijn hoeveel outfits u kunt samenstellen uit 8 items.</p>
+<h2 style="margin-top: 40px; margin-bottom: 24px;">Schoeisel is essentieel</h2>
+<p class="mb-8">Schoenen maken of breken een stedentrip. Neem één paar ingelopen wandelschoenen mee (leren sneakers zijn een goede keuze) en één netter paar voor de avond. Laat gloednieuwe schoenen thuis. Blaren op dag twee verpesten een verder geweldige trip.</p>
+<blockquote style="border-left: 3px solid var(--color-gold); padding-left: 24px; margin: 40px 0; font-style: italic; font-size: 20px;">
+"Onze meest bereisde klanten hebben één ding gemeen: een kleine koffer en nul inpakspijt."
+</blockquote>
+<h2 style="margin-top: 40px; margin-bottom: 24px;">Technologie en essentials</h2>
+<p class="mb-8">Een universele adapter, een powerbank en een herbruikbare waterfles. Die drie items lossen 90% van de reisergernissen op. Overdag is een kleine crossbodytas ideaal: uw handen zijn vrij en de tas zit dicht tegen uw lichaam in drukke straten.</p>`
   },
   {
     slug: 'red-sea-diving',
@@ -874,7 +984,20 @@ const blogPosts = [
 "I was nervous about my first dive. Ten minutes in, I forgot about everything except the fish. The reef was so alive it felt like another planet."
 </blockquote>
 <h2 style="margin-top: 40px; margin-bottom: 24px;">Practical Tips</h2>
-<p class="mb-8">Most Hurghada resorts have a PADI dive centre on site. A Discover Scuba session runs about 3 hours: a briefing, some pool practice, and then a guided reef dive. No certification needed. If you catch the bug (most people do), you can start your Open Water course the next day.</p>`
+<p class="mb-8">Most Hurghada resorts have a PADI dive centre on site. A Discover Scuba session runs about 3 hours: a briefing, some pool practice, and then a guided reef dive. No certification needed. If you catch the bug (most people do), you can start your Open Water course the next day.</p>`,
+    title_nl: 'Duiken in de Rode Zee: wat kunt u verwachten',
+    category_nl: 'Bestemmingsgidsen',
+    excerpt_nl: 'Wat beginnende duikers moeten weten over Hurghada, van riflocaties tot PADI-sessies.',
+    content_nl: `<p class="mb-8">De Rode Zee heeft een van de helderste en warmste wateren die u waar dan ook zult vinden, en Hurghada brengt u er middenin. De riffen hier barsten van de kleur. U ziet keizervissen, clownvissen, murenen en als u geluk heeft een voorbijzwemmende zeeschildpad of rifhaai. Wij hebben zowel complete beginners als ervaren duikers gestuurd, en beide groepen komen enthousiast terug.</p>
+<h2 style="margin-top: 40px; margin-bottom: 24px;">Waarom de Rode Zee bijzonder is</h2>
+<p class="mb-8">De geografie helpt. Warm water, hoog zoutgehalte en vrijwel geen rivierafvoer zorgen ervoor dat het koraal dik groeit en het zicht regelmatig meer dan 30 meter bedraagt. Op een kalme ochtend kunt u de bodem zien vanaf de boot, nog voordat u erin springt. Het is een van die zeldzame plekken waar alleen al snorkelen de reis waard is.</p>
+<h2 style="margin-top: 40px; margin-bottom: 24px;">Beste locaties voor beginners</h2>
+<p class="mb-8">Giftun Island is waar wij beginners naartoe sturen. De baaien zijn beschut, het water is ondiep en het rif begint op slechts een paar meter van de kust. Voor iets avontuurlijkers heeft Sha'ab El Erg (lokaal bekend als Dolphin House) een vaste groep spinnerdolfijnen. Naast hen zwemmen is een ervaring die u niet snel vergeet.</p>
+<blockquote style="border-left: 3px solid var(--color-gold); padding-left: 24px; margin: 40px 0; font-style: italic; font-size: 20px;">
+"Ik was zenuwachtig voor mijn eerste duik. Na tien minuten vergat ik alles behalve de vissen. Het rif was zo levendig dat het aanvoelde als een andere planeet."
+</blockquote>
+<h2 style="margin-top: 40px; margin-bottom: 24px;">Praktische tips</h2>
+<p class="mb-8">De meeste resorts in Hurghada hebben een PADI-duikcentrum op het terrein. Een Discover Scuba-sessie duurt ongeveer 3 uur: een briefing, wat oefenen in het zwembad en vervolgens een begeleide rifduik. Geen certificering nodig. Als u de smaak te pakken krijgt (en dat gebeurt bij de meesten), kunt u de volgende dag al beginnen met uw Open Water-cursus.</p>`
   },
   {
     slug: 'santorini-beyond-sunsets',
@@ -894,7 +1017,20 @@ const blogPosts = [
 "We spent a whole afternoon in Pyrgos with a bottle of Assyrtiko and nowhere to be. That was the day we fell in love with Santorini."
 </blockquote>
 <h2 style="margin-top: 40px; margin-bottom: 24px;">Red Beach and Akrotiri</h2>
-<p class="mb-8">Akrotiri is a Bronze Age settlement preserved under volcanic ash, often compared to Pompeii. It is fascinating and well worth two hours. Just around the corner, Red Beach has dramatic crimson cliffs dropping into turquoise water. Go early in the morning, before 9am if you can. You will practically have the place to yourself.</p>`
+<p class="mb-8">Akrotiri is a Bronze Age settlement preserved under volcanic ash, often compared to Pompeii. It is fascinating and well worth two hours. Just around the corner, Red Beach has dramatic crimson cliffs dropping into turquoise water. Go early in the morning, before 9am if you can. You will practically have the place to yourself.</p>`,
+    title_nl: 'Santorini: meer dan alleen zonsondergangen',
+    category_nl: 'Reisplanning',
+    excerpt_nl: 'Sla de drukke uitzichtpunten van Oia over en ontdek het Santorini dat de locals voor zichzelf houden.',
+    content_nl: `<p class="mb-8">Iedereen kent Santorini van de caldera en de zonsondergangen, en ja, die zijn prachtig. Maar het eiland heeft een hele andere kant die de meeste bezoekers nooit zien. Stap van het hoofdpad in Oia, huur een dag een auto en u vindt dorpen, wijngaarden en stranden die aanvoelen als een compleet ander eiland.</p>
+<h2 style="margin-top: 40px; margin-bottom: 24px;">De verborgen dorpen</h2>
+<p class="mb-8">Pyrgos ligt op het hoogste punt van het eiland, en vanaf de ruïnes van het middeleeuwse kasteel heeft u een 360-graden uitzicht met vrijwel niemand in de buurt. De steegjes zijn smal, de katten zijn vriendelijk en het licht in de late namiddag is ongelooflijk. Megalochori is nog rustiger, een wijndorp met stenen binnenplaatsen en oude houten deuren. Wij raden klanten altijd aan hier minstens één keer te lunchen.</p>
+<h2 style="margin-top: 40px; margin-bottom: 24px;">Wijn en gastronomie</h2>
+<p class="mb-8">De vulkanische bodem geeft de wijnen van Santorini een minerale scherpte die u nergens anders in Griekenland vindt. Assyrtiko is de ster, fris en droog met een zilte afdronk. Santo Wines en Venetsanos bieden beide proeverijen aan met uitzicht op de caldera (reserveer vooruit in het hoogseizoen). Combineer de wijn met fava, lokale kerstomaatjes en witte aubergine. Eenvoudig eten, maar smaken die hier anders uitpakken.</p>
+<blockquote style="border-left: 3px solid var(--color-gold); padding-left: 24px; margin: 40px 0; font-style: italic; font-size: 20px;">
+"We brachten een hele middag door in Pyrgos met een fles Assyrtiko en nergens heen te hoeven. Dat was de dag dat we verliefd werden op Santorini."
+</blockquote>
+<h2 style="margin-top: 40px; margin-bottom: 24px;">Red Beach en Akrotiri</h2>
+<p class="mb-8">Akrotiri is een nederzetting uit de Bronstijd, bewaard gebleven onder vulkanische as en vaak vergeleken met Pompeji. Het is fascinerend en zeker twee uur waard. Om de hoek ligt Red Beach met dramatische karmozijnrode kliffen die in turquoise water vallen. Ga vroeg in de ochtend, voor 9 uur als het kan. U heeft de plek dan vrijwel voor uzelf.</p>`
   }
 ];
 

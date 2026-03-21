@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Request a Quote | Plan Your Luxury Trip | Prestige Travels</title>
-  <meta name="description" content="Ready for your next luxury journey? Request a bespoke quote today. Our travel advisors will design a tailored itinerary for Amsterdam, Dubai, Hurghada, or Santorini.">
+  <title>Vraag een offerte aan | Plan uw luxe reis | Prestige Travels</title>
+  <meta name="description" content="Klaar voor uw volgende luxe reis? Vraag vandaag nog een offerte op maat aan. Onze reisadviseurs stellen een reisroute samen voor Amsterdam, Dubai, Hurghada of Santorini.">
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Prestige Travels" />
-  <meta property="og:title" content="Request a Quote | Plan Your Luxury Trip" />
-  <meta property="og:description" content="Ready for your next luxury journey? Request a bespoke quote today. Our travel advisors will design a tailored itinerary." />
+  <meta property="og:title" content="Vraag een offerte aan | Plan uw luxe reis" />
+  <meta property="og:description" content="Klaar voor uw volgende luxe reis? Vraag vandaag nog een offerte op maat aan. Onze reisadviseurs stellen een reisroute samen." />
   <meta property="og:image" content="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&q=80&w=1200&h=630" />
   <meta property="og:url" content="https://prestige-travels.nl/nl/request-quote" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Request a Quote | Plan Your Luxury Trip" />
-  <meta name="twitter:description" content="Request a bespoke luxury travel quote." />
+  <meta name="twitter:title" content="Vraag een offerte aan | Plan uw luxe reis" />
+  <meta name="twitter:description" content="Vraag een luxe reisofferte op maat aan." />
   <meta name="twitter:image" content="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&q=80&w=1200&h=630" />
   <link rel="canonical" href="https://prestige-travels.nl/nl/request-quote.html" />
   <link rel="alternate" hreflang="en" href="https://prestige-travels.nl/en/request-quote.html" />
@@ -80,17 +80,17 @@
         <div class="grid-3" style="grid-template-columns: 1fr 1fr; gap: 24px;">
           <div class="form-group">
             <label for="fullName" class="form-label" data-i18n="quote.form.fullName">Full Name *</label>
-            <input type="text" id="fullName" class="form-control" placeholder="e.g. Jane Doe" required>
+            <input type="text" id="fullName" class="form-control" placeholder="bijv. Jan de Vries" required>
           </div>
           <div class="form-group">
             <label for="email" class="form-label" data-i18n="quote.form.email">Email Address *</label>
-            <input type="email" id="email" class="form-control" placeholder="e.g. jane@example.com" required>
+            <input type="email" id="email" class="form-control" placeholder="bijv. jan@voorbeeld.nl" required>
           </div>
         </div>
 
         <div class="form-group">
           <label for="phone" class="form-label" data-i18n="quote.form.phone">Phone Number</label>
-          <input type="tel" id="phone" class="form-control" placeholder="e.g. +31 6 12345678">
+          <input type="tel" id="phone" class="form-control" placeholder="bijv. +31 6 12345678">
         </div>
 
         <input type="hidden" id="itinerary-id" name="itinerary" value="">
@@ -98,7 +98,7 @@
         <div class="form-group">
           <label for="destination" class="form-label" data-i18n="quote.form.destination">Destination of Interest</label>
           <select id="destination" class="form-control">
-            <option value="">Any</option>
+            <option value="">Alle bestemmingen</option>
             <option value="Amsterdam">Amsterdam</option>
             <option value="Dubai">Dubai</option>
             <option value="Hurghada">Hurghada</option>
@@ -108,39 +108,39 @@
         <div class="grid-3" style="grid-template-columns: 1fr 1fr; gap: 24px;">
           <div class="form-group">
             <label for="dates" class="form-label" data-i18n="quote.form.dates">Travel Dates (or approximate month)</label>
-            <input type="text" id="dates" class="form-control" placeholder="e.g. October 2026">
+            <input type="text" id="dates" class="form-control" placeholder="bijv. oktober 2026">
           </div>
           <div class="form-group">
             <label for="travellers" class="form-label" data-i18n="quote.form.travellers">Number of Travellers</label>
-            <input type="text" id="travellers" class="form-control" placeholder="e.g. 2 Adults, 2 Children">
+            <input type="text" id="travellers" class="form-control" placeholder="bijv. 2 volwassenen, 2 kinderen">
           </div>
         </div>
 
         <div class="form-group">
           <label for="budget" class="form-label" data-i18n="quote.form.budget">Budget Range (Per Person)</label>
           <select id="budget" class="form-control">
-            <option>Not sure</option>
-            <option>Under €1,000</option>
-            <option>€1,000 – €2,000</option>
-            <option>€2,000 – €5,000</option>
-            <option>€5,000+ per person</option>
+            <option>Nog niet bepaald</option>
+            <option>Onder €1.000</option>
+            <option>€1.000 – €2.000</option>
+            <option>€2.000 – €5.000</option>
+            <option>€5.000+ per persoon</option>
           </select>
         </div>
 
         <div class="form-group">
           <label for="details" class="form-label" data-i18n="quote.form.details">Tell us more</label>
-          <textarea id="details" class="form-control" placeholder="What are you looking forward to? Any special occasions or specific requirements?"></textarea>
+          <textarea id="details" class="form-control" placeholder="Waar kijkt u het meest naar uit? Zijn er speciale gelegenheden of specifieke wensen?"></textarea>
         </div>
 
         <div class="form-group" style="display: flex; gap: 12px; align-items: flex-start;">
           <input type="checkbox" id="gdpr" required style="margin-top: 4px;">
-          <label for="gdpr" style="font-size: 14px; opacity: 0.8;">I agree to the <a href="privacy.html" style="text-decoration: underline;">Privacy Policy</a> and consent to being contacted about my enquiry.</label>
+          <label for="gdpr" style="font-size: 14px; opacity: 0.8;">Ik ga akkoord met het <a href="privacy.html" style="text-decoration: underline;">Privacybeleid</a> en geef toestemming om benaderd te worden over mijn aanvraag.</label>
         </div>
 
         <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 24px;" data-i18n="quote.form.submit">Send Request</button>
-        <p style="text-align: center; font-size: 12px; margin-top: 12px; opacity: 0.7;">No obligation — we'll get back to you within 24 hours.</p>
+        <p style="text-align: center; font-size: 12px; margin-top: 12px; opacity: 0.7;">Geheel vrijblijvend — wij reageren binnen 24 uur.</p>
         <noscript>
-          <p style="color: red; margin-top: 16px;">Please enable JavaScript to submit this form, or email us directly.</p>
+          <p style="color: red; margin-top: 16px;">Schakel JavaScript in om dit formulier te versturen, of e-mail ons direct.</p>
         </noscript>
       </form>
 
@@ -157,7 +157,7 @@
         <div class="footer-col">
           <h4>Prestige Travels</h4>
           <p>Langswater 198<br>1069 TS Amsterdam, NL</p>
-          <p class="mt-16"><a href="mailto:info@prestige-travels.nl">info@prestige-travels.nl</a><br><a href="https://wa.me/31657196097">WhatsApp Us</a></p>
+          <p class="mt-16"><a href="mailto:info@prestige-travels.nl">info@prestige-travels.nl</a><br><a href="https://wa.me/31657196097">WhatsApp ons</a></p>
           <div class="social-links">
             <a href="https://instagram.com/prestige_travels_nl" target="_blank" aria-label="Instagram">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
@@ -188,7 +188,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <span>&copy; 2026 Prestige Travels. All rights reserved.</span>
+        <span>&copy; 2026 Prestige Travels. Alle rechten voorbehouden.</span>
         <span>KvK: 97890677</span>
       </div>
     </div>

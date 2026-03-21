@@ -206,17 +206,21 @@ function renderDynamicContent() {
   const { destinations, itineraries, faqs, getTierDisplay } = window.PT_DATA;
 
   // Render Featured Destinations (Home)
+  const isNLDest = getLang() === 'nl';
   const destContainer = document.getElementById('featured-destinations');
   if (destContainer) {
-    destContainer.innerHTML = destinations.map(dest => `
+    destContainer.innerHTML = destinations.map(dest => {
+      const tagline = isNLDest && dest.tagline_nl ? dest.tagline_nl : dest.tagline;
+      return `
       <a href="itineraries.html?dest=${dest.slug}" class="dest-card">
         <img src="${dest.heroImage}" alt="${dest.name}" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&q=80'">
         <div class="dest-overlay">
           <h3>${dest.name}</h3>
-          <p>${dest.tagline}</p>
+          <p>${tagline}</p>
         </div>
       </a>
-    `).join('');
+    `;
+    }).join('');
   }
 
   // Render Featured Itineraries (Home)
@@ -246,15 +250,22 @@ function renderDynamicContent() {
       if (t) filtered = filtered.filter(i => i.tier === t);
 
       if (filtered.length === 0) {
-        allItinContainer.innerHTML = '<div class="text-center" style="grid-column: 1/-1; padding: 60px 0; opacity: 0.6;"><p>No itineraries match your selection. Try adjusting the filters.</p></div>';
+        const noResultsMsg = getLang() === 'nl'
+          ? 'Geen reisroutes gevonden voor uw selectie. Probeer de filters aan te passen.'
+          : 'No itineraries match your selection. Try adjusting the filters.';
+        allItinContainer.innerHTML = `<div class="text-center" style="grid-column: 1/-1; padding: 60px 0; opacity: 0.6;"><p>${noResultsMsg}</p></div>`;
       } else {
         allItinContainer.innerHTML = renderItineraryCards(filtered, getTierDisplay);
       }
 
       const title = document.querySelector('.itineraries-title');
       if (title) {
-        if (d) title.textContent = `Itineraries for ${d.charAt(0).toUpperCase() + d.slice(1)}`;
-        else title.textContent = 'Find your journey.';
+        if (d) {
+          const destName = d.charAt(0).toUpperCase() + d.slice(1);
+          title.textContent = getLang() === 'nl' ? `Reisroutes voor ${destName}` : `Itineraries for ${destName}`;
+        } else {
+          title.textContent = getLang() === 'nl' ? 'Vind uw ideale reis.' : 'Find your journey.';
+        }
       }
     };
 
@@ -266,22 +277,27 @@ function renderDynamicContent() {
 
   // Render FAQs based on data-tag attribute
   const faqContainers = document.querySelectorAll('.faq-container');
+  const isNLFaq = getLang() === 'nl';
   faqContainers.forEach(container => {
     const tag = container.getAttribute('data-tag');
     const filteredFaqs = faqs.filter(f => f.tag === tag);
 
     if (filteredFaqs.length > 0) {
-      container.innerHTML = filteredFaqs.map(faq => `
+      container.innerHTML = filteredFaqs.map(faq => {
+        const q = isNLFaq && faq.question_nl ? faq.question_nl : faq.question;
+        const a = isNLFaq && faq.answer_nl ? faq.answer_nl : faq.answer;
+        return `
         <div class="accordion">
           <button class="accordion-header">
-            ${faq.question}
+            ${q}
             <span class="accordion-icon">+</span>
           </button>
           <div class="accordion-content">
-            <p>${faq.answer}</p>
+            <p>${a}</p>
           </div>
         </div>
-      `).join('');
+      `;
+      }).join('');
 
       // Re-init accordions for newly added DOM elements
       initAccordions();
@@ -334,7 +350,7 @@ function renderItineraryDetail() {
       <div class="container">
         <div style="display: flex; flex-wrap: wrap; gap: 40px; justify-content: center; font-family: var(--font-heading); font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase;">
           <span>${itin.duration}</span>
-          <span>From &euro;${itin.priceFrom} pp</span>
+          <span>${isNL ? 'Vanaf' : 'From'} &euro;${itin.priceFrom} pp</span>
           <span>${itin.boardBasis}</span>
           <span>${itin.resortHotel}</span>
         </div>
@@ -397,6 +413,10 @@ function renderItineraryDetail() {
       </div>
     </section>
   `;
+
+  // Re-apply language after dynamic content is rendered
+  const reapplyLang = localStorage.getItem('pt-lang') || 'en';
+  setLanguage(reapplyLang);
 }
 
 // ─── Itinerary Cards ───────────────────────────────────────────────
@@ -419,9 +439,9 @@ function renderItineraryCards(itins, getTierDisplay) {
           <div class="itin-drawer">
             <div class="itin-meta">
               <span>${itin.duration}</span>
-              <span>From &euro;${itin.priceFrom}</span>
+              <span>${isNL ? 'Vanaf' : 'From'} &euro;${itin.priceFrom}</span>
             </div>
-            <span class="explore-link">Explore journey &rarr;</span>
+            <span class="explore-link">${isNL ? 'Ontdek deze reis' : 'Explore journey'} &rarr;</span>
           </div>
         </div>
       </a>
@@ -439,8 +459,10 @@ function renderBlogContent() {
   const { blogPosts } = window.PT_DATA;
   if (!blogPosts) return;
 
-  const categories = ['All Posts', ...new Set(blogPosts.map(p => p.category))];
-  let activeFilter = 'All Posts';
+  const isNLBlog = getLang() === 'nl';
+  const allLabel = isNLBlog ? 'Alle artikelen' : 'All Posts';
+  const categories = [allLabel, ...new Set(blogPosts.map(p => isNLBlog && p.category_nl ? p.category_nl : p.category))];
+  let activeFilter = allLabel;
 
   const renderFilters = () => {
     filtersContainer.innerHTML = categories.map(cat => `
@@ -458,17 +480,25 @@ function renderBlogContent() {
   };
 
   const renderPosts = () => {
-    const filtered = activeFilter === 'All Posts' ? blogPosts : blogPosts.filter(p => p.category === activeFilter);
-    postsContainer.innerHTML = filtered.map(post => `
+    const filtered = activeFilter === allLabel ? blogPosts : blogPosts.filter(p => {
+      const cat = isNLBlog && p.category_nl ? p.category_nl : p.category;
+      return cat === activeFilter;
+    });
+    postsContainer.innerHTML = filtered.map(post => {
+      const title = isNLBlog && post.title_nl ? post.title_nl : post.title;
+      const category = isNLBlog && post.category_nl ? post.category_nl : post.category;
+      const excerpt = isNLBlog && post.excerpt_nl ? post.excerpt_nl : post.excerpt;
+      return `
       <a href="post.html?slug=${post.slug}" class="itin-card" style="background-color: var(--color-offwhite); color: var(--color-charcoal);">
-        <img src="${post.image}" alt="${post.title}" style="height: 60%;">
+        <img src="${post.image}" alt="${title}" style="height: 60%;">
         <div style="position: absolute; bottom: 0; left: 0; width: 100%; height: 40%; padding: 24px;">
-          <span class="dest-label" style="color: var(--color-gold); margin-bottom: 8px; display: block;">${post.category}</span>
-          <h3 style="font-size: 18px; color: var(--color-black); margin-bottom: 8px;">${post.title}</h3>
-          <p style="font-size: 14px; opacity: 0.8;">${post.excerpt}</p>
+          <span class="dest-label" style="color: var(--color-gold); margin-bottom: 8px; display: block;">${category}</span>
+          <h3 style="font-size: 18px; color: var(--color-black); margin-bottom: 8px;">${title}</h3>
+          <p style="font-size: 14px; opacity: 0.8;">${excerpt}</p>
         </div>
       </a>
-    `).join('');
+    `;
+    }).join('');
   };
 
   renderFilters();
@@ -488,8 +518,15 @@ function renderBlogPost() {
   const slug = params.get('slug');
 
   const post = blogPosts.find(p => p.slug === slug) || blogPosts[0];
+  const isNLPost = getLang() === 'nl';
 
-  document.title = `${post.title} | Prestige Travels`;
+  const postTitle = isNLPost && post.title_nl ? post.title_nl : post.title;
+  const postCategory = isNLPost && post.category_nl ? post.category_nl : post.category;
+  const postContent = isNLPost && post.content_nl ? post.content_nl : post.content;
+  const minReadLabel = isNLPost ? 'min. leestijd' : 'min read';
+  const tagsLabel = isNLPost ? 'Tags:' : 'Tags:';
+
+  document.title = `${postTitle} | Prestige Travels`;
 
   // Get related posts (same category, excluding current)
   const related = blogPosts.filter(p => p.slug !== post.slug).slice(0, 3);
@@ -497,12 +534,12 @@ function renderBlogPost() {
   container.innerHTML = `
     <!-- Hero -->
     <section class="hero" style="height: 60vh; min-height: 400px;">
-      <img src="${post.image.replace('w=800', 'w=2000')}" alt="${post.title}" class="hero-bg">
+      <img src="${post.image.replace('w=800', 'w=2000')}" alt="${postTitle}" class="hero-bg">
       <div class="hero-overlay"></div>
       <div class="container text-center">
         <div style="margin: 0 auto; max-width: 800px;">
-          <span class="dest-label" style="color: var(--color-gold); margin-bottom: 24px; display: block;">${post.category}</span>
-          <h1>${post.title}</h1>
+          <span class="dest-label" style="color: var(--color-gold); margin-bottom: 24px; display: block;">${postCategory}</span>
+          <h1>${postTitle}</h1>
           <p style="font-family: var(--font-heading); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase;">${post.date}</p>
         </div>
       </div>
@@ -512,14 +549,14 @@ function renderBlogPost() {
     <section class="section">
       <div class="container" style="max-width: 800px;">
         <div style="display: flex; gap: 16px; margin-bottom: 40px; font-family: var(--font-heading); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase;">
-          <span style="color: var(--color-gold);">${post.category}</span>
+          <span style="color: var(--color-gold);">${postCategory}</span>
           <span>${post.date}</span>
-          <span>${post.readTime} min read</span>
+          <span>${post.readTime} ${minReadLabel}</span>
         </div>
         <div style="font-size: 18px;">
-          ${post.content}
+          ${postContent}
           <div style="margin-top: 40px; padding-top: 24px; border-top: 1px solid #eee;">
-            <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; margin-right: 16px;">Tags:</span>
+            <span style="font-family: var(--font-heading); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; margin-right: 16px;">${tagsLabel}</span>
             <span style="font-size: 14px; opacity: 0.7;">${post.tags.join(' &middot; ')}</span>
           </div>
         </div>
@@ -531,15 +568,19 @@ function renderBlogPost() {
       <div class="container">
         <h2 class="mb-8" data-i18n="post.relatedPosts">Related posts</h2>
         <div class="grid-3">
-          ${related.map(p => `
+          ${related.map(p => {
+            const rTitle = isNLPost && p.title_nl ? p.title_nl : p.title;
+            const rCat = isNLPost && p.category_nl ? p.category_nl : p.category;
+            return `
             <a href="post.html?slug=${p.slug}" class="itin-card" style="background-color: var(--color-offwhite); color: var(--color-charcoal); aspect-ratio: 4/3;">
-              <img src="${p.image}" alt="${p.title}" style="height: 60%;">
+              <img src="${p.image}" alt="${rTitle}" style="height: 60%;">
               <div style="position: absolute; bottom: 0; left: 0; width: 100%; height: 40%; padding: 24px;">
-                <span class="dest-label" style="color: var(--color-gold); margin-bottom: 8px; display: block;">${p.category}</span>
-                <h3 style="font-size: 18px; color: var(--color-black);">${p.title}</h3>
+                <span class="dest-label" style="color: var(--color-gold); margin-bottom: 8px; display: block;">${rCat}</span>
+                <h3 style="font-size: 18px; color: var(--color-black);">${rTitle}</h3>
               </div>
             </a>
-          `).join('')}
+          `;
+          }).join('')}
         </div>
       </div>
     </section>
