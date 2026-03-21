@@ -426,6 +426,141 @@ const itineraries = [
     ],
     flightsNote_nl: 'Premium vluchten vanuit Amsterdam (AMS) inbegrepen.',
     whatsappText_nl: 'Hallo Prestige Travels, ik wil meer weten over het Hurghada Royal pakket.'
+  },
+  {
+    internalId: 'SAT-01',
+    destination: 'Santorini',
+    tier: 'Good',
+    name: 'Santorini Escape',
+    duration: '5 Nights',
+    priceFrom: 1299,
+    resortHotel: 'Andronis Concept Wellness Resort',
+    boardBasis: 'B&B',
+    flightsNote: 'Return flights from Amsterdam (AMS) included.',
+    cardDescription: 'Classic Santorini caldera views, whitewashed villages, and Aegean sunsets.',
+    heroImage: 'https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&q=80&w=800',
+    hotelImage: 'https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?auto=format&fit=crop&q=80&w=800',
+    resortDescription: 'Andronis Concept Wellness Resort sits on the Oia cliffs with unobstructed caldera views. The infinity pool seems to merge with the Aegean, and the on-site spa draws on Greek botanical traditions. Rooms are carved into the volcanic rock with private terraces facing the sunset.',
+    highlights: [
+      '5 Nights B&B Accommodation',
+      'Return Flights from Amsterdam',
+      'Airport Transfers',
+      'Caldera Sunset Catamaran Cruise',
+      '24/7 WhatsApp Advisor Support'
+    ],
+    excursions: [
+      { title: 'Sunset Catamaran Cruise', desc: 'A 5-hour sailing trip along the caldera with stops for swimming at Red Beach and the hot springs, with a BBQ dinner on board.' },
+      { title: 'Oia Village Walking Tour', desc: 'A guided walk through the blue-domed lanes of Oia, visiting artisan workshops and hidden viewpoints away from the crowds.' },
+      { title: 'Assyrtiko Wine Tasting', desc: 'A guided tasting at a traditional canava winery, sampling volcanic wines paired with local cheeses and sun-dried tomatoes.' }
+    ],
+    featured: false,
+    subtitle_nl: 'Klassieke calderazichten, witgekalkte dorpen en Egeïsche zonsondergangen op Santorini.',
+    resortDescription_nl: 'Andronis Concept Wellness Resort ligt op de kliffen van Oia met vrij uitzicht op de caldera. Het infinity zwembad lijkt samen te smelten met de Egeïsche Zee, en de spa maakt gebruik van Griekse botanische tradities. Kamers zijn uitgehouwen in het vulkanisch gesteente met privéterrassen richting de zonsondergang.',
+    highlights_nl: [
+      '5 nachten bed & breakfast',
+      'Retourvluchten vanuit Amsterdam',
+      'Luchthaventransfers',
+      'Catamaran zonsondergangscruise over de caldera',
+      '24/7 WhatsApp reisadviseur'
+    ],
+    excursions_nl: [
+      { title: 'ZONSONDERGANG CATAMARAN CRUISE', desc: 'Een 5 uur durende zeiltocht langs de caldera met zwemstops bij Red Beach en de warmwaterbronnen, inclusief BBQ-diner aan boord.' },
+      { title: 'WANDELTOUR DOOR OIA', desc: 'Een begeleide wandeling door de blauwgekoepelde straatjes van Oia, langs ambachtelijke ateliers en verborgen uitzichtpunten.' },
+      { title: 'ASSYRTIKO WIJNPROEVERIJ', desc: 'Een begeleide proeverij bij een traditionele canava-wijnmakerij met vulkanische wijnen, lokale kazen en zongedroogde tomaten.' }
+    ],
+    flightsNote_nl: 'Retourvluchten vanuit Amsterdam (AMS) inbegrepen.',
+    whatsappText: "Hi Prestige Travels, I'd like to enquire about the Santorini Escape package.",
+    whatsappText_nl: 'Hallo Prestige Travels, ik wil meer weten over het Santorini Escape pakket.'
+  },
+  {
+    internalId: 'SAT-02',
+    destination: 'Santorini',
+    tier: 'Better',
+    name: 'Santorini Refined',
+    duration: '7 Nights',
+    priceFrom: 2199,
+    resortHotel: 'Canaves Oia Epitome',
+    boardBasis: 'Half Board',
+    flightsNote: 'Return flights from Amsterdam (AMS) included.',
+    cardDescription: 'Cliffside infinity pools, private sunset terraces, and wine country exploration.',
+    heroImage: 'https://images.unsplash.com/photo-1613395877344-13d4a8e0d49e?auto=format&fit=crop&q=80&w=800',
+    hotelImage: 'https://images.unsplash.com/photo-1602343168117-bb8ffe3e2e9f?auto=format&fit=crop&q=80&w=800',
+    resortDescription: 'Canaves Oia Epitome is a boutique retreat perched above the caldera with private plunge pools in every suite. The restaurant serves contemporary Greek cuisine with ingredients sourced from the hotel\'s own garden. Its location at the quiet end of Oia offers caldera views without the foot traffic.',
+    highlights: [
+      '7 Nights Half Board in a Suite with Plunge Pool',
+      'Return Flights from Amsterdam',
+      'Private Airport Transfers',
+      'Private Wine Tour of Santorini Vineyards',
+      'Dedicated Travel Advisor'
+    ],
+    excursions: [
+      { title: 'Private Wine Country Tour', desc: 'A chauffeured half-day tour visiting three boutique wineries including Venetsanos and Santo Wines, with a sommelier guiding each tasting.' },
+      { title: 'Akrotiri Archaeological Site', desc: 'A private guided tour of the Bronze Age settlement preserved under volcanic ash, followed by lunch at a traditional taverna in Megalochori.' },
+      { title: 'Thirassia Island Day Trip', desc: 'A private boat to the unspoiled island of Thirassia for hiking, swimming in secluded coves, and a seafood lunch at a cliffside taverna.' }
+    ],
+    featured: true,
+    subtitle_nl: 'Infinity pools aan de klif, privéterrassen bij zonsondergang en wijnlandschappen.',
+    resortDescription_nl: 'Canaves Oia Epitome is een boetiekresort boven de caldera met een privé plonsbad in elke suite. Het restaurant serveert eigentijdse Griekse keuken met ingrediënten uit de eigen tuin van het hotel. De rustige ligging aan het uiteinde van Oia biedt calderazicht zonder de drukte.',
+    highlights_nl: [
+      '7 nachten halfpension in suite met plonsbad',
+      'Retourvluchten vanuit Amsterdam',
+      'Privé luchthaventransfers',
+      'Privé wijntour langs Santorini wijngaarden',
+      'Persoonlijke reisadviseur'
+    ],
+    excursions_nl: [
+      { title: 'PRIVÉ WIJNTOUR', desc: 'Een halvedaagse tour met chauffeur langs drie boetiekwijngaarden waaronder Venetsanos en Santo Wines, begeleid door een sommelier.' },
+      { title: 'AKROTIRI ARCHEOLOGISCHE SITE', desc: 'Een privébegeleide rondleiding door de Bronstijdnederzetting bewaard onder vulkanische as, gevolgd door lunch in een traditionele taverna in Megalochori.' },
+      { title: 'DAGTRIP THIRASSIA', desc: 'Een privéboot naar het ongerepte eiland Thirassia voor wandelen, zwemmen in afgelegen baaien en een vismaaltijd bij een taverna aan de klif.' }
+    ],
+    flightsNote_nl: 'Retourvluchten vanuit Amsterdam (AMS) inbegrepen.',
+    whatsappText: "Hi Prestige Travels, I'd like to enquire about the Santorini Refined package.",
+    whatsappText_nl: 'Hallo Prestige Travels, ik wil meer weten over het Santorini Refined pakket.'
+  },
+  {
+    internalId: 'SAT-03',
+    destination: 'Santorini',
+    tier: 'Best',
+    name: 'Santorini Prestige',
+    duration: '7 Nights',
+    priceFrom: 3499,
+    resortHotel: 'Grace Hotel Santorini',
+    boardBasis: 'Full Board + Extras',
+    flightsNote: 'Business class flights from Amsterdam (AMS) included.',
+    cardDescription: 'The pinnacle of Greek island luxury with private concierge and helicopter transfers.',
+    heroImage: 'https://images.unsplash.com/photo-1555993539-1732b0258235?auto=format&fit=crop&q=80&w=800',
+    hotelImage: 'https://images.unsplash.com/photo-1601581875039-e899893d520c?auto=format&fit=crop&q=80&w=800',
+    resortDescription: 'Grace Hotel Santorini is an Auberge property carved into the Imerovigli cliffs at the highest point of the caldera rim. The champagne lounge, infinity pool, and Grace restaurant set the standard for luxury in the Greek islands. Every room faces the sunset with uninterrupted caldera views.',
+    highlights: [
+      '7 Nights Full Board in a Suite with Private Pool',
+      'Business Class Flights from Amsterdam',
+      'Helicopter Transfer from Airport',
+      'Private Concierge Service',
+      'Couples Spa Ritual at Grace Spa'
+    ],
+    excursions: [
+      { title: 'Private Yacht Charter', desc: 'A full-day private yacht cruise around the caldera and neighbouring islands with a personal chef, open bar, and stops at volcanic hot springs.' },
+      { title: 'Helicopter Tour of the Caldera', desc: 'A 20-minute private helicopter flight over the volcanic crater, Oia, and the surrounding Cycladic islands with champagne on landing.' },
+      { title: 'Private Chef Dinner on Your Terrace', desc: 'A Michelin-trained chef prepares a multi-course Greek tasting menu on your private terrace as the sun sets over the caldera.' }
+    ],
+    featured: false,
+    subtitle_nl: 'Het hoogtepunt van Grieks eilandluxe met privéconcierge en helikoptertransfers.',
+    resortDescription_nl: 'Grace Hotel Santorini is een Auberge-eigendom uitgehouwen in de kliffen van Imerovigli, op het hoogste punt van de calderarand. De champagnelounge, het infinity zwembad en restaurant Grace zetten de standaard voor luxe op de Griekse eilanden. Elke kamer kijkt uit op de zonsondergang met ononderbroken calderazicht.',
+    highlights_nl: [
+      '7 nachten volpension in suite met privézwembad',
+      'Business class vluchten vanuit Amsterdam',
+      'Helikoptertransfer vanaf de luchthaven',
+      'Privéconciergeservice',
+      'Koppelspa-ritueel bij Grace Spa'
+    ],
+    excursions_nl: [
+      { title: 'PRIVÉ JACHTCHARTER', desc: 'Een hele dag privéjachtcruise rond de caldera en naburige eilanden met een persoonlijke chef, open bar en stops bij vulkanische warmwaterbronnen.' },
+      { title: 'HELIKOPTERTOUR OVER DE CALDERA', desc: 'Een 20 minuten durende privéhelikoptervlucht over de vulkanische krater, Oia en de omliggende Cycladische eilanden met champagne bij landing.' },
+      { title: 'PRIVÉCHEF-DINER OP UW TERRAS', desc: 'Een Michelin-opgeleide chef bereidt een meergangenmenu met Griekse smaken op uw privéterras terwijl de zon ondergaat boven de caldera.' }
+    ],
+    flightsNote_nl: 'Business class vluchten vanuit Amsterdam (AMS) inbegrepen.',
+    whatsappText: "Hi Prestige Travels, I'd like to enquire about the Santorini Prestige package.",
+    whatsappText_nl: 'Hallo Prestige Travels, ik wil meer weten over het Santorini Prestige pakket.'
   }
 ];
 
