@@ -86,8 +86,8 @@ const itineraries = [
     boardBasis: 'Half Board',
     flightsNote: 'Flights from AMS not included. Can be arranged on request.',
     cardDescription: 'Elevated canal-side luxury with private museum access and fine dining.',
-    heroImage: 'https://images.unsplash.com/photo-1576400883215-7083980b6193?auto=format&fit=crop&q=80&w=800',
-    hotelImage: 'https://images.unsplash.com/photo-1590490360182-c33d955e5d83?auto=format&fit=crop&q=80&w=800',
+    heroImage: 'https://images.unsplash.com/photo-1576924542622-772281b13aa3?auto=format&fit=crop&q=80&w=800',
+    hotelImage: 'https://images.unsplash.com/photo-1566552881560-0be862a7c445?auto=format&fit=crop&q=80&w=800',
     resortDescription: 'The Pulitzer Amsterdam occupies 25 restored Golden Age canal houses on the Prinsengracht. With its private garden, canal-side terrace, and award-winning restaurant Jansz, it is one of the city\'s most iconic luxury hotels.',
     highlights: [
       '4 Nights in a Canal View Room',
