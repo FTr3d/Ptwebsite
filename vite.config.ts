@@ -20,6 +20,8 @@ export default defineConfig(({mode}) => {
           terms: path.resolve(__dirname, 'terms.html'),
           privacy: path.resolve(__dirname, 'privacy.html'),
           post: path.resolve(__dirname, 'post.html'),
+          paymentPlans: path.resolve(__dirname, 'payment-plans.html'),
+          cookies: path.resolve(__dirname, 'cookies.html'),
         },
       },
     },

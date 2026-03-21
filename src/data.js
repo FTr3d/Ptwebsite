@@ -1,69 +1,32 @@
-// Mock Data for Prestige Travels MVP
+// Data for Prestige Travels MVP
 
 const destinations = [
   {
     id: 'dest-1',
     name: 'Amsterdam',
     slug: 'amsterdam',
-    tagline: 'The Refined Capital',
+    tagline: 'Culture, Canals & Cosmopolitan Luxury',
     heroImage: 'https://images.unsplash.com/photo-1534351590666-13e3e96b5017?auto=format&fit=crop&q=80&w=1920',
-    shortDescription: 'Experience the historic charm and modern luxury of Amsterdam through a curated local lens.'
+    shortDescription: 'A city of golden-age architecture, world-class museums, and intimate canal-side dining.',
+    featured: true
   },
   {
     id: 'dest-2',
     name: 'Dubai',
     slug: 'dubai',
-    tagline: 'Limitless Luxury',
+    tagline: 'Skyline, Desert & Modern Extravagance',
     heroImage: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&q=80&w=1920',
-    shortDescription: 'Discover the pinnacle of modern opulence, desert adventures, and world-class hospitality.'
+    shortDescription: 'Iconic towers, private beach clubs, and a desert landscape unlike anywhere else on Earth.',
+    featured: true
   },
   {
     id: 'dest-3',
     name: 'Hurghada',
     slug: 'hurghada',
-    tagline: 'Red Sea Riviera',
-    heroImage: 'https://images.unsplash.com/photo-1570660090461-a35a90de7a25?auto=format&fit=crop&q=80&w=1920',
-    shortDescription: 'Unwind on pristine beaches and explore vibrant coral reefs in Egypt’s premier coastal retreat.'
-  },
-  {
-    id: 'dest-4',
-    name: 'Santorini',
-    slug: 'santorini',
-    tagline: 'Aegean Elegance',
-    heroImage: 'https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&q=80&w=1920',
-    shortDescription: 'Experience the iconic blue domes and breathtaking sunsets of Greece’s most romantic island.'
-  },
-  {
-    id: 'dest-5',
-    name: 'Maldives',
-    slug: 'maldives',
-    tagline: 'Paradise Found',
-    heroImage: 'https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&q=80&w=1920',
-    shortDescription: 'Overwater villas, crystal clear lagoons, and the ultimate in tropical luxury.'
-  },
-  {
-    id: 'dest-6',
-    name: 'Bali',
-    slug: 'bali',
-    tagline: 'Island of the Gods',
-    heroImage: 'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&q=80&w=1920',
-    shortDescription: 'Lush jungles, ancient temples, and serene beachfront retreats in Indonesia.'
-  },
-  {
-    id: 'dest-7',
-    name: 'Japan',
-    slug: 'japan',
-    tagline: 'Timeless Tradition',
-    heroImage: 'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&q=80&w=1920',
-    shortDescription: 'A perfect blend of ancient culture, futuristic cities, and refined hospitality.'
-  },
-  {
-    id: 'dest-8',
-    name: 'Morocco',
-    slug: 'morocco',
-    tagline: 'Desert Dreams',
-    heroImage: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?auto=format&fit=crop&q=80&w=1920',
-    shortDescription: 'Vibrant souks, majestic palaces, and the golden dunes of the Sahara.'
+    tagline: 'Red Sea Reefs, All-Inclusive Luxury',
+    heroImage: 'https://images.unsplash.com/photo-1562887245-f2fb0b28e672?auto=format&fit=crop&q=80&w=1920',
+    shortDescription: 'Pristine coral reefs, warm azure waters, and world-class all-inclusive resorts.',
+    featured: true
   }
 ];
 
@@ -74,18 +37,26 @@ const itineraries = [
     tier: 'Good',
     name: 'Amsterdam Essentials',
     duration: '3 Nights',
-    priceFrom: 850,
-    resort: 'Boutique Canal Hotel',
-    boardBasis: 'Bed & Breakfast',
-    flightsNote: 'Flights not included. Can be arranged on request.',
-    cardDescription: 'A perfect introduction to the city’s highlights.',
+    priceFrom: 599,
+    resortHotel: 'Hotel V Nesplein',
+    boardBasis: 'B&B',
+    flightsNote: 'Flights from AMS not included. Can be arranged on request.',
+    cardDescription: 'A perfect introduction to Amsterdam with handpicked local highlights.',
     heroImage: 'https://images.unsplash.com/photo-1534351590666-13e3e96b5017?auto=format&fit=crop&q=80&w=800',
-    resortDescription: 'Stay in a charming, hand-selected boutique hotel overlooking the historic canals. Perfect for those who want an authentic Amsterdam experience with modern comforts.',
-    inclusions: ['3 Nights Boutique Accommodation', 'Daily Artisan Breakfast', 'Private Canal Cruise', 'Guided Walking Tour'],
-    experiences: [
-      { title: 'Private Canal Cruise', desc: 'A 90-minute private boat tour through the UNESCO-listed canal ring with local snacks.' },
-      { title: 'Hidden Gems Tour', desc: 'A walking tour led by a local expert focusing on secret courtyards and local history.' }
-    ]
+    resortDescription: 'Hotel V Nesplein is a design-led boutique hotel on the edge of Amsterdam\'s Nine Streets district. Its rooftop bar offers panoramic views of the city, and the central location puts you minutes from Dam Square and the canals.',
+    highlights: [
+      '3 Nights Boutique Accommodation',
+      'Daily Artisan Breakfast',
+      'Private Canal Cruise (90 min)',
+      'Guided Walking Tour of the Jordaan',
+      '24/7 WhatsApp Advisor Support'
+    ],
+    excursions: [
+      { title: 'Private Canal Cruise', desc: 'A 90-minute private boat tour through the UNESCO-listed canal ring with local snacks and drinks.' },
+      { title: 'Jordaan Hidden Gems Tour', desc: 'A walking tour led by a local expert focusing on secret courtyards, independent galleries, and local history.' },
+      { title: 'Vondelpark & Museum Quarter Walk', desc: 'A self-guided audio walk through Amsterdam\'s cultural heart, passing the Rijksmuseum, Van Gogh Museum, and Concertgebouw.' }
+    ],
+    featured: false
   },
   {
     internalId: 'AMS-02',
@@ -93,18 +64,26 @@ const itineraries = [
     tier: 'Better',
     name: 'Amsterdam Refined',
     duration: '4 Nights',
-    priceFrom: 1450,
-    resort: 'Luxury Heritage Hotel',
-    boardBasis: 'Bed & Breakfast',
-    flightsNote: 'Flights included from select European hubs.',
-    cardDescription: 'Elevated stays and exclusive private tours.',
+    priceFrom: 899,
+    resortHotel: 'Pulitzer Amsterdam',
+    boardBasis: 'Half Board',
+    flightsNote: 'Flights from AMS not included. Can be arranged on request.',
+    cardDescription: 'Elevated canal-side luxury with private museum access and fine dining.',
     heroImage: 'https://images.unsplash.com/photo-1580137189272-c9379f8864fd?auto=format&fit=crop&q=80&w=800',
-    resortDescription: 'A grand heritage hotel combining 17th-century architecture with contemporary luxury. Located in the heart of the city, offering exceptional service and refined interiors.',
-    inclusions: ['4 Nights Luxury Accommodation', 'Daily Gourmet Breakfast', 'Private Museum Entry', 'Fine Dining Experience'],
-    experiences: [
-      { title: 'Rijksmuseum After Hours', desc: 'A private guided tour of the Rijksmuseum before or after public opening hours.' },
-      { title: 'Michelin Dining', desc: 'A curated 5-course tasting menu at one of Amsterdam’s premier Michelin-starred restaurants.' }
-    ]
+    resortDescription: 'The Pulitzer Amsterdam occupies 25 restored Golden Age canal houses on the Prinsengracht. With its private garden, canal-side terrace, and award-winning restaurant Jansz, it is one of the city\'s most iconic luxury hotels.',
+    highlights: [
+      '4 Nights in a Canal View Room',
+      'Daily Gourmet Breakfast & Dinner',
+      'Private After-Hours Rijksmuseum Tour',
+      'Michelin-Star Dining Experience',
+      'Dedicated Travel Advisor'
+    ],
+    excursions: [
+      { title: 'Rijksmuseum After Hours', desc: 'A private guided tour of the Rijksmuseum before public opening hours, including the Night Watch gallery.' },
+      { title: 'Michelin Dining Experience', desc: 'A curated 5-course tasting menu at one of Amsterdam\'s premier Michelin-starred restaurants with wine pairing.' },
+      { title: 'Artisan Cheese & Wine Cruise', desc: 'A private evening canal cruise with a curated selection of Dutch artisan cheeses and local wines.' }
+    ],
+    featured: true
   },
   {
     internalId: 'AMS-03',
@@ -112,18 +91,26 @@ const itineraries = [
     tier: 'Best',
     name: 'Amsterdam Prestige',
     duration: '5 Nights',
-    priceFrom: 2900,
-    resort: 'Waldorf Astoria Amsterdam',
-    boardBasis: 'Bed & Breakfast',
-    flightsNote: 'Premium flights and private transfers included.',
-    cardDescription: 'The ultimate luxury experience with dedicated concierge.',
+    priceFrom: 1499,
+    resortHotel: 'Hotel de l\'Europe',
+    boardBasis: 'Full Board + Extras',
+    flightsNote: 'Flights from AMS not included. Premium transfers included.',
+    cardDescription: 'The ultimate Amsterdam experience with dedicated concierge and exclusive access.',
     heroImage: 'https://images.unsplash.com/photo-1605146769289-440113cc3d00?auto=format&fit=crop&q=80&w=800',
-    resortDescription: 'The pinnacle of Amsterdam luxury. Six historic 17th and 18th-century palaces on the Herengracht canal, offering unparalleled elegance and the city’s finest spa.',
-    inclusions: ['5 Nights in a Canal View Suite', 'Personal Concierge Service', 'Private Jet/First Class Flights', 'Elite Private Tours'],
-    experiences: [
-      { title: 'Private Art Masterclass', desc: 'A private session with a renowned local artist in their studio, including art history insights.' },
-      { title: 'Exclusive Garden Dinner', desc: 'A private dinner served in the hotel’s magnificent private garden, the largest in the city.' }
-    ]
+    resortDescription: 'Hotel de l\'Europe is a five-star landmark on the Amstel river, blending 19th-century grandeur with contemporary Dutch design. Its Michelin-starred restaurant Flore and Elemis spa make it the pinnacle of Amsterdam luxury.',
+    highlights: [
+      '5 Nights in a River View Suite',
+      'Full Board with Michelin Dining',
+      'Personal Concierge Service',
+      'Private Art Masterclass',
+      'Premium Airport Transfers'
+    ],
+    excursions: [
+      { title: 'Private Art Masterclass', desc: 'A private session with a renowned local artist in their canal-house studio, including art history insights and your own work to take home.' },
+      { title: 'Exclusive Garden Dinner', desc: 'A private multi-course dinner served in the hotel\'s magnificent courtyard garden, the largest private garden in central Amsterdam.' },
+      { title: 'Helicopter Tour over Holland', desc: 'A 30-minute private helicopter flight over the Amsterdam canal ring, tulip fields, and windmills of Zaanse Schans.' }
+    ],
+    featured: false
   },
   {
     internalId: 'DXB-01',
@@ -131,18 +118,26 @@ const itineraries = [
     tier: 'Good',
     name: 'Dubai Discovery',
     duration: '5 Nights',
-    priceFrom: 1200,
-    resort: 'Marina View Hotel',
-    boardBasis: 'Half Board',
-    flightsNote: 'Flights included from AMS.',
-    cardDescription: 'Experience the vibrant energy of Dubai Marina.',
+    priceFrom: 1099,
+    resortHotel: 'Rove Downtown Dubai',
+    boardBasis: 'B&B',
+    flightsNote: 'Return flights from Amsterdam (AMS) included.',
+    cardDescription: 'Experience the vibrant energy of downtown Dubai with desert safari included.',
     heroImage: 'https://images.unsplash.com/photo-1518684079-3c830dcef090?auto=format&fit=crop&q=80&w=800',
-    resortDescription: 'A modern, stylish hotel located in the heart of Dubai Marina. Enjoy easy access to the beach, shopping malls, and the city’s best nightlife.',
-    inclusions: ['5 Nights Modern Accommodation', 'Half Board Dining', 'Return Flights', 'Desert Safari Experience'],
-    experiences: [
-      { title: 'Evening Desert Safari', desc: 'Dune bashing, camel riding, and a traditional BBQ dinner under the stars.' },
-      { title: 'Marina Dhow Cruise', desc: 'A relaxing evening cruise through the marina with international buffet dinner.' }
-    ]
+    resortDescription: 'Rove Downtown is a modern, design-forward hotel steps from the Dubai Mall and Burj Khalifa. Its rooftop pool offers stunning skyline views, and the central location makes it perfect for first-time visitors.',
+    highlights: [
+      '5 Nights Modern Accommodation',
+      'Daily Breakfast',
+      'Return Flights from Amsterdam',
+      'Evening Desert Safari with BBQ Dinner',
+      'Airport Transfers'
+    ],
+    excursions: [
+      { title: 'Evening Desert Safari', desc: 'Dune bashing in a 4x4, camel riding, henna painting, and a traditional BBQ dinner under the stars.' },
+      { title: 'Dubai Marina Dhow Cruise', desc: 'A relaxing 2-hour evening cruise through the marina with an international buffet dinner and live entertainment.' },
+      { title: 'Old Dubai Heritage Walk', desc: 'A guided walking tour through Al Fahidi, the Gold Souk, and the Spice Souk with traditional Arabic coffee.' }
+    ],
+    featured: false
   },
   {
     internalId: 'DXB-02',
@@ -150,18 +145,26 @@ const itineraries = [
     tier: 'Better',
     name: 'Dubai Elevated',
     duration: '7 Nights',
-    priceFrom: 2200,
-    resort: 'Palm Jumeirah Resort',
+    priceFrom: 1799,
+    resortHotel: 'Atlantis The Palm',
     boardBasis: 'Half Board',
-    flightsNote: 'Flights and private transfers included.',
-    cardDescription: 'Beachfront luxury and desert safari adventures.',
+    flightsNote: 'Return flights from Amsterdam (AMS) included.',
+    cardDescription: 'Beachfront luxury on the Palm with premium desert and skyline experiences.',
     heroImage: 'https://images.unsplash.com/photo-1582672060624-ac926d15274c?auto=format&fit=crop&q=80&w=800',
-    resortDescription: 'An iconic beachfront resort on the Palm Jumeirah. Offering stunning views of the Arabian Gulf and the Dubai skyline, with world-class facilities.',
-    inclusions: ['7 Nights Beachfront Luxury', 'Half Board Dining', 'Private Airport Transfers', 'Premium Desert Experience'],
-    experiences: [
-      { title: 'Luxury Desert Safari', desc: 'A private desert safari in a luxury vehicle with a gourmet dinner in a private camp.' },
-      { title: 'Burj Khalifa At The Top', desc: 'Fast-track entry to the world’s highest observation deck with lounge access.' }
-    ]
+    resortDescription: 'Atlantis The Palm is an iconic resort at the crescent of Palm Jumeirah. With its private beach, Aquaventure waterpark, the Lost Chambers aquarium, and celebrity chef restaurants, it delivers an unforgettable Dubai experience.',
+    highlights: [
+      '7 Nights Beachfront Luxury',
+      'Half Board with Celebrity Chef Dining',
+      'Return Flights from Amsterdam',
+      'Private Airport Transfers',
+      'Aquaventure Waterpark Access'
+    ],
+    excursions: [
+      { title: 'Luxury Desert Safari', desc: 'A private desert safari in a luxury Land Rover with a gourmet dinner at a private Bedouin-style camp.' },
+      { title: 'Burj Khalifa At The Top', desc: 'Fast-track entry to the 148th floor observation deck with premium lounge access and champagne.' },
+      { title: 'Palm Jumeirah Speedboat Tour', desc: 'A 90-minute private speedboat tour around the Palm and Dubai Marina with skyline photo opportunities.' }
+    ],
+    featured: true
   },
   {
     internalId: 'DXB-03',
@@ -169,18 +172,26 @@ const itineraries = [
     tier: 'Best',
     name: 'Dubai Pinnacle',
     duration: '7 Nights',
-    priceFrom: 4500,
-    resort: 'Burj Al Arab Jumeirah',
-    boardBasis: 'All Inclusive',
-    flightsNote: 'Business class flights and helicopter transfer.',
-    cardDescription: 'Unmatched opulence in the world’s most luxurious hotel.',
+    priceFrom: 2999,
+    resortHotel: 'Burj Al Arab',
+    boardBasis: 'Full Board + Private Transfers',
+    flightsNote: 'Business class flights from Amsterdam (AMS) included.',
+    cardDescription: 'Unmatched opulence in the world\'s most luxurious hotel with private butler.',
     heroImage: 'https://images.unsplash.com/photo-1546412414-e1885259563a?auto=format&fit=crop&q=80&w=800',
-    resortDescription: 'Experience the epitome of Arabian luxury. The Burj Al Arab Jumeirah offers duplex suites with panoramic views, private butler service, and access to a private beach.',
-    inclusions: ['7 Nights in a Deluxe Suite', 'Business Class Flights', 'Helicopter Transfer', '24/7 Private Butler'],
-    experiences: [
-      { title: 'Private Yacht Charter', desc: 'A half-day private luxury yacht charter around the Palm Jumeirah with a personal chef.' },
-      { title: 'Helicopter City Tour', desc: 'A private helicopter tour over Dubai’s most iconic landmarks.' }
-    ]
+    resortDescription: 'The Burj Al Arab Jumeirah is the world\'s most iconic luxury hotel. Every duplex suite comes with a private butler, panoramic Arabian Gulf views, and access to a private beach, terrace pool, and the exclusive Summersalt Beach Club.',
+    highlights: [
+      '7 Nights in a Duplex Suite',
+      'Business Class Flights from Amsterdam',
+      'Full Board + 24/7 Private Butler',
+      'Helicopter or Rolls-Royce Transfer',
+      'Access to Summersalt Beach Club'
+    ],
+    excursions: [
+      { title: 'Private Yacht Charter', desc: 'A half-day luxury yacht charter around the Palm Jumeirah and World Islands with a personal chef and open bar.' },
+      { title: 'Helicopter City Tour', desc: 'A 25-minute private helicopter tour over Dubai\'s most iconic landmarks including the Burj Khalifa and Palm Jumeirah.' },
+      { title: 'Royal Desert Experience', desc: 'A private overnight glamping experience in the desert with stargazing, falconry, and a Michelin-quality dinner.' }
+    ],
+    featured: true
   },
   {
     internalId: 'HRG-01',
@@ -188,18 +199,26 @@ const itineraries = [
     tier: 'Good',
     name: 'Hurghada Escape',
     duration: '7 Nights',
-    priceFrom: 950,
-    resort: 'Red Sea Beach Resort',
+    priceFrom: 799,
+    resortHotel: 'Steigenberger Aqua Magic',
     boardBasis: 'All Inclusive',
-    flightsNote: 'Direct flights included.',
-    cardDescription: 'Relaxing beach holiday with excellent value.',
+    flightsNote: 'Return flights from Amsterdam (AMS) included.',
+    cardDescription: 'Relaxing all-inclusive beach holiday with Red Sea snorkeling.',
     heroImage: 'https://images.unsplash.com/photo-1583217874534-581393fd5325?auto=format&fit=crop&q=80&w=800',
-    resortDescription: 'A family-friendly all-inclusive resort on the shores of the Red Sea. Perfect for sun-seekers and water sports enthusiasts.',
-    inclusions: ['7 Nights All Inclusive', 'Return Flights', 'Airport Transfers', 'Snorkeling Trip'],
-    experiences: [
-      { title: 'Giftun Island Trip', desc: 'A full-day boat trip to the beautiful Giftun Island for snorkeling and beach time.' },
-      { title: 'Glass Bottom Boat', desc: 'Explore the vibrant coral reefs without getting wet on a guided glass-bottom boat tour.' }
-    ]
+    resortDescription: 'Steigenberger Aqua Magic is a family-friendly all-inclusive resort on the Hurghada coastline. With multiple pools, a private sandy beach, water slides, and an on-site reef for snorkeling, it offers outstanding value on the Red Sea.',
+    highlights: [
+      '7 Nights All Inclusive',
+      'Return Flights from Amsterdam',
+      'Airport Transfers',
+      'Giftun Island Snorkeling Trip',
+      'Access to Aqua Park & Private Beach'
+    ],
+    excursions: [
+      { title: 'Giftun Island Boat Trip', desc: 'A full-day boat trip to the protected Giftun Island for snorkeling over coral reefs, beach time, and a buffet lunch.' },
+      { title: 'Glass Bottom Boat Tour', desc: 'Explore the vibrant coral reefs and tropical fish without getting wet on a guided glass-bottom boat tour.' },
+      { title: 'Quad Bike Desert Safari', desc: 'A 2-hour sunset quad bike safari through the Eastern Desert with Bedouin tea and stargazing.' }
+    ],
+    featured: false
   },
   {
     internalId: 'HRG-02',
@@ -207,170 +226,295 @@ const itineraries = [
     tier: 'Better',
     name: 'Hurghada Azure',
     duration: '10 Nights',
-    priceFrom: 1600,
-    resort: 'Steigenberger ALDAU Beach',
-    boardBasis: 'Ultra All Inclusive',
-    flightsNote: 'Direct flights and private transfers included.',
-    cardDescription: 'Premium beachfront resort with private boat charter.',
+    priceFrom: 1199,
+    resortHotel: 'Rixos Premium Magawish',
+    boardBasis: 'All Inclusive Ultra',
+    flightsNote: 'Return flights from Amsterdam (AMS) included.',
+    cardDescription: 'Premium beachfront resort with private boat charter and Luxor day trip.',
     heroImage: 'https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?auto=format&fit=crop&q=80&w=800',
-    resortDescription: 'A premier luxury resort offering a private beach, a lazy river, and a world-class golf course. Known for its exceptional service and dining.',
-    inclusions: ['10 Nights Ultra All Inclusive', 'Direct Flights', 'Private Transfers', 'Private Boat Charter'],
-    experiences: [
-      { title: 'Private Boat Charter', desc: 'A private day on the Red Sea with a dedicated crew, snorkeling gear, and lunch.' },
-      { title: 'Luxor Day Trip', desc: 'A private guided day trip to Luxor to visit the Valley of the Kings and Karnak Temple.' }
-    ]
+    resortDescription: 'Rixos Premium Magawish Suites & Villas offers ultra all-inclusive luxury on a private stretch of Red Sea beach. With a world-class spa, multiple à la carte restaurants, and a kids\' club, it suits couples and families alike.',
+    highlights: [
+      '10 Nights Ultra All Inclusive',
+      'Return Flights from Amsterdam',
+      'Private Airport Transfers',
+      'Private Boat Charter Day',
+      'Spa Credit (1 Treatment per Person)'
+    ],
+    excursions: [
+      { title: 'Private Boat Charter', desc: 'A full-day private boat on the Red Sea with a dedicated crew, snorkeling gear, fishing equipment, and a fresh seafood lunch.' },
+      { title: 'Luxor Day Trip', desc: 'A private guided day trip to Luxor to visit the Valley of the Kings, Karnak Temple, and Hatshepsut Temple.' },
+      { title: 'Dolphin House Reef Snorkeling', desc: 'A half-day trip to Sha\'ab El Erg reef, famous for its resident pod of wild spinner dolphins.' }
+    ],
+    featured: true
   },
   {
     internalId: 'HRG-03',
     destination: 'Hurghada',
     tier: 'Best',
     name: 'Hurghada Royal',
-    duration: '10 Nights',
-    priceFrom: 2800,
-    resort: 'The Oberoi Beach Resort, Sahl Hasheesh',
-    boardBasis: 'Premium All Inclusive',
-    flightsNote: 'Premium flights and luxury transfers.',
-    cardDescription: 'Exclusive suite living and private diving experiences.',
+    duration: '14 Nights',
+    priceFrom: 1899,
+    resortHotel: 'Sahl Hasheesh Beach Resort',
+    boardBasis: 'All Inclusive Prestige',
+    flightsNote: 'Premium flights from Amsterdam (AMS) included.',
+    cardDescription: 'Exclusive suite living with private diving and desert stargazing.',
     heroImage: 'https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&q=80&w=800',
-    resortDescription: 'An all-suite luxury resort set in 48 acres of palm-filled gardens. Offering the ultimate in privacy and serenity on the Red Sea coast.',
-    inclusions: ['10 Nights in a Grand Suite', 'Premium Flights', 'Luxury Transfers', 'Private Diving Sessions'],
-    experiences: [
-      { title: 'Private Scuba Diving', desc: 'One-on-one scuba diving sessions with a master instructor at exclusive reef sites.' },
-      { title: 'Stargazing Dinner', desc: 'A private gourmet dinner in the desert with a professional astronomer and telescope.' }
-    ]
-  },
-  {
-    internalId: 'SAN-01',
-    destination: 'Santorini',
-    tier: 'Better',
-    name: 'Santorini Sunset',
-    duration: '5 Nights',
-    priceFrom: 1850,
-    resort: 'Luxury Caldera Suite',
-    boardBasis: 'Bed & Breakfast',
-    flightsNote: 'Flights included from major hubs.',
-    cardDescription: 'Breathtaking views and private infinity pools.',
-    heroImage: 'https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&q=80&w=800',
-    resortDescription: 'A stunning boutique hotel perched on the cliffs of Oia. Each suite features a private infinity pool and panoramic views of the Aegean Sea.',
-    inclusions: ['5 Nights Caldera View Suite', 'Daily Champagne Breakfast', 'Private Sunset Cruise', 'Wine Tasting Tour'],
-    experiences: [
-      { title: 'Private Sunset Cruise', desc: 'A 4-hour private catamaran cruise with dinner and drinks as the sun sets over the caldera.' },
-      { title: 'Volcanic Wine Tour', desc: 'A private tour of Santorini’s unique volcanic vineyards with a professional sommelier.' }
-    ]
-  },
-  {
-    internalId: 'SAN-02',
-    destination: 'Santorini',
-    tier: 'Best',
-    name: 'Santorini Prestige',
-    duration: '7 Nights',
-    priceFrom: 3500,
-    resort: 'Canaves Oia Epitome',
-    boardBasis: 'Bed & Breakfast',
-    flightsNote: 'Business class flights and private transfers.',
-    cardDescription: 'The ultimate Greek island luxury experience.',
-    heroImage: 'https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&q=80&w=800',
-    resortDescription: 'Experience unparalleled luxury at one of the world’s most awarded resorts. Offering privacy, space, and world-class service in a serene setting.',
-    inclusions: ['7 Nights in a Private Villa', 'Business Class Flights', 'Private Helicopter Transfer', 'Dedicated Villa Host'],
-    experiences: [
-      { title: 'Helicopter Island Tour', desc: 'A private helicopter tour over Santorini and the surrounding Cycladic islands.' },
-      { title: 'Private Chef Dinner', desc: 'A bespoke multi-course dinner prepared in your villa by a private chef.' }
-    ]
-  },
-  {
-    internalId: 'MAL-01',
-    destination: 'Maldives',
-    tier: 'Best',
-    name: 'Maldives Overwater Bliss',
-    duration: '7 Nights',
-    priceFrom: 4999,
-    resort: 'Soneva Jani',
-    boardBasis: 'Half Board',
-    flightsNote: 'Premium flights and seaplane transfers included.',
-    cardDescription: 'The ultimate overwater villa experience.',
-    heroImage: 'https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&q=80&w=800',
-    resortDescription: 'Soneva Jani is located on the island of Medhufaru in the Maldives’ Noonu Atoll. It features overwater and island villas, each with its own private pool and retractable roof.',
-    inclusions: ['7 Nights in an Overwater Retreat', 'Half Board Dining', 'Seaplane Transfers', 'Personal Butler'],
-    experiences: [
-      { title: 'Private Starlight Cinema', desc: 'A private movie screening on a floating screen in the lagoon.' },
-      { title: 'Dolphin Cruise', desc: 'A sunset cruise to spot wild dolphins in the Indian Ocean.' }
-    ]
-  },
-  {
-    internalId: 'BAL-01',
-    destination: 'Bali',
-    tier: 'Better',
-    name: 'Bali Jungle & Beach',
-    duration: '10 Nights',
-    priceFrom: 2499,
-    resort: 'Four Seasons Bali at Sayan',
-    boardBasis: 'Bed & Breakfast',
-    flightsNote: 'Flights and private driver included.',
-    cardDescription: 'Lush jungle retreats and serene beaches.',
-    heroImage: 'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&q=80&w=800',
-    resortDescription: 'Experience the spiritual heart of Bali in Ubud’s lush jungle, followed by a relaxing stay at a world-class beachfront resort.',
-    inclusions: ['5 Nights Jungle Suite', '5 Nights Beachfront Villa', 'Private Driver for 10 Days', 'Daily Yoga Sessions'],
-    experiences: [
-      { title: 'Sacred Monkey Forest', desc: 'A private guided tour of Ubud’s famous monkey forest and ancient temples.' },
-      { title: 'Balinese Cooking Class', desc: 'Learn the secrets of Balinese cuisine in a private traditional kitchen.' }
-    ]
-  },
-  {
-    internalId: 'JPN-01',
-    destination: 'Japan',
-    tier: 'Best',
-    name: 'Japan Cultural Immersion',
-    duration: '12 Nights',
-    priceFrom: 8999,
-    resort: 'Aman Tokyo & Ryokan Stays',
-    boardBasis: 'Mixed',
-    flightsNote: 'Business class flights and Shinkansen passes included.',
-    cardDescription: 'A refined journey through Tokyo, Kyoto, and Hakone.',
-    heroImage: 'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&q=80&w=800',
-    resortDescription: 'Stay at the iconic Aman Tokyo before heading to Kyoto for a traditional Ryokan experience with private onsen.',
-    inclusions: ['12 Nights Ultra-Luxury Accommodation', 'Business Class Flights', 'Green Car Rail Pass', 'Private Cultural Guides'],
-    experiences: [
-      { title: 'Private Tea Ceremony', desc: 'A private tea ceremony with a master in a historic Kyoto tea house.' },
-      { title: 'Sumo Training Visit', desc: 'An exclusive morning visit to a traditional Sumo stable to watch training.' }
-    ]
+    resortDescription: 'Set within the exclusive Sahl Hasheesh Bay, this resort offers spacious suites with sea views, a private coral reef just offshore, and beautifully landscaped gardens. Its Prestige package includes premium spirits, private dining, and priority reservations.',
+    highlights: [
+      '14 Nights in a Sea View Suite',
+      'All Inclusive Prestige Package',
+      'Premium Flights from Amsterdam',
+      'Private Diving Sessions (3 dives)',
+      'VIP Lounge & Private Beach Cabana'
+    ],
+    excursions: [
+      { title: 'Private Scuba Diving', desc: 'Three one-on-one scuba diving sessions with a master PADI instructor at exclusive reef sites including Abu Ramada and Giftun.' },
+      { title: 'Desert Stargazing Dinner', desc: 'A private gourmet dinner in the Eastern Desert with a professional astronomer, telescope, and Bedouin campfire.' },
+      { title: 'Cairo & Pyramids Overnight', desc: 'A private overnight trip to Cairo including the Pyramids of Giza, the Sphinx, the Egyptian Museum, and a Nile dinner cruise.' }
+    ],
+    featured: false
   }
 ];
 
 const faqs = [
+  // HOME FAQs (H-1 to H-5)
   {
-    tag: 'home',
-    q: 'Do you have a booking engine?',
-    a: 'No — and intentionally so. Every trip is built by a human advisor, not an algorithm. Use our quote form or WhatsApp to get started.'
+    id: 'H-1',
+    question: 'Do you have a booking engine?',
+    answer: 'No — and intentionally so. Every trip is built by a human advisor, not an algorithm. Use our quote form or WhatsApp to get started.',
+    tag: 'home'
   },
   {
-    tag: 'home',
-    q: 'How quickly will you respond to a quote request?',
-    a: 'Within 24 hours on working days. WhatsApp responses are typically faster — most clients hear back the same day.'
+    id: 'H-2',
+    question: 'How quickly will you respond to a quote request?',
+    answer: 'Within 24 hours on working days. WhatsApp responses are typically faster — most clients hear back the same day.',
+    tag: 'home'
   },
   {
-    tag: 'home',
-    q: 'Is Prestige Travels a registered travel agency in the Netherlands?',
-    a: 'Yes. Prestige Travels is registered with the Dutch Chamber of Commerce (KvK) and operates in full compliance with Dutch consumer travel regulations. Our KvK number is listed in the footer of this website.'
+    id: 'H-3',
+    question: 'Is Prestige Travels a registered travel agency?',
+    answer: 'Yes. Prestige Travels is registered with the Dutch Chamber of Commerce (KvK: 97890677) and operates in full compliance with Dutch consumer travel regulations and the EU Package Travel Directive.',
+    tag: 'home'
   },
   {
-    tag: 'how-it-works',
-    q: 'How does the quote process work?',
-    a: 'You fill in our quote form or contact us via WhatsApp. Your advisor reviews your request and sends a personalised proposal within 24 hours — including itinerary and pricing.'
+    id: 'H-4',
+    question: 'Which destinations do you currently offer?',
+    answer: 'Our MVP launch focuses on Amsterdam, Dubai, and Hurghada — three destinations our team knows inside out. We plan to expand to additional destinations based on client demand.',
+    tag: 'home'
   },
   {
-    tag: 'how-it-works',
-    q: 'Is the quote free and non-binding?',
-    a: 'Completely. There is no obligation until you confirm with a deposit. We\'ll never pressure you to commit.'
+    id: 'H-5',
+    question: 'Can you arrange a trip to a destination not listed on your website?',
+    answer: 'Absolutely. Our itineraries are starting points. If you have a specific destination in mind, contact us and we will design a bespoke proposal tailored to your wishes.',
+    tag: 'home'
+  },
+
+  // HOW IT WORKS FAQs (W-1 to W-7)
+  {
+    id: 'W-1',
+    question: 'How does the quote process work?',
+    answer: 'You fill in our quote form or contact us via WhatsApp. Your advisor reviews your request and sends a personalised proposal within 24 hours — including itinerary, pricing, and payment schedule.',
+    tag: 'how-it-works'
   },
   {
-    tag: 'how-it-works',
-    q: 'How do payments work?',
-    a: 'Typically 25% deposit to confirm, 50% at 60 days before departure, and the final 25% balance at 30 days before departure. All payment schedules are confirmed in writing per booking.'
+    id: 'W-2',
+    question: 'Is the quote free and non-binding?',
+    answer: 'Completely. There is no obligation until you confirm with a deposit. We will never pressure you to commit.',
+    tag: 'how-it-works'
   },
   {
-    tag: 'how-it-works',
-    q: 'Are there any hidden fees?',
-    a: 'No. Our pricing is completely transparent. The quote you receive is the final price you pay.'
+    id: 'W-3',
+    question: 'How do payments work?',
+    answer: 'Typically 25% deposit to confirm, with the remaining balance spread across milestones leading up to departure. All payment schedules are confirmed in writing per booking.',
+    tag: 'how-it-works'
+  },
+  {
+    id: 'W-4',
+    question: 'Are there any hidden fees?',
+    answer: 'No. Our pricing is completely transparent. The quote you receive is the final price you pay — no booking fees, no admin charges, no surprises.',
+    tag: 'how-it-works'
+  },
+  {
+    id: 'W-5',
+    question: 'Can I make changes after receiving my proposal?',
+    answer: 'Of course. Unlimited revisions are included at no extra charge before you confirm your booking. We want you to be completely happy with every detail.',
+    tag: 'how-it-works'
+  },
+  {
+    id: 'W-6',
+    question: 'How long does it take to finalise a booking?',
+    answer: 'Most bookings are finalised within 3–5 days of the initial enquiry. Complex multi-destination trips may take a little longer, but your advisor will keep you informed at every step.',
+    tag: 'how-it-works'
+  },
+  {
+    id: 'W-7',
+    question: 'What is included in every Prestige Travels booking?',
+    answer: 'Every booking includes a dedicated travel advisor, a fully detailed itinerary document, 24/7 WhatsApp support during your trip, and all arrangements confirmed in writing before you travel.',
+    tag: 'how-it-works'
+  },
+
+  // PAYMENT PLANS FAQs (PP-1 to PP-6)
+  {
+    id: 'PP-1',
+    question: 'What is the minimum deposit to secure a booking?',
+    answer: 'For departures more than 3 months away, the deposit is 25% of the total travel sum. For departures under 3 months, a 50% deposit is required. Bookings within 28 days of departure require full payment.',
+    tag: 'payment-plans'
+  },
+  {
+    id: 'PP-2',
+    question: 'Is there interest or admin fees on payment plans?',
+    answer: 'No. Our payment plans are completely interest-free with no admin fees. The price you are quoted is the price you pay, regardless of how many milestones your payments are split across.',
+    tag: 'payment-plans'
+  },
+  {
+    id: 'PP-3',
+    question: 'What happens if I miss a payment milestone?',
+    answer: 'Your advisor will contact you proactively. A 14-day grace period applies from the original due date. Repeated non-payment beyond the grace period may, in rare cases, result in the booking being released.',
+    tag: 'payment-plans'
+  },
+  {
+    id: 'PP-4',
+    question: 'Can I pay the full amount upfront instead?',
+    answer: 'Yes. You are welcome to pay the full travel sum at any time. The payment plan is simply an option we offer — there is no obligation to use it.',
+    tag: 'payment-plans'
+  },
+  {
+    id: 'PP-5',
+    question: 'What payment methods do you accept?',
+    answer: 'We accept bank transfer (SEPA), credit card, and iDEAL. All payment details and instructions are included in your booking confirmation.',
+    tag: 'payment-plans'
+  },
+  {
+    id: 'PP-6',
+    question: 'Is everyone eligible for a payment plan?',
+    answer: 'Payment plans are offered at our discretion and are subject to approval per booking. This will always be communicated clearly before you confirm your booking. We reserve the right to decline or withdraw a payment plan.',
+    tag: 'payment-plans'
+  },
+
+  // ITINERARIES FAQs (I-1 to I-8)
+  {
+    id: 'I-1',
+    question: 'Can I customise one of your listed itineraries?',
+    answer: 'Absolutely. Every itinerary on our website is a starting point. Your advisor will tailor it to your exact preferences — different hotels, longer stays, extra excursions, dietary requirements, you name it.',
+    tag: 'itineraries'
+  },
+  {
+    id: 'I-2',
+    question: 'What do the tier levels (Curated, Premier, Prestige) mean?',
+    answer: 'Our tiers reflect the level of luxury and inclusions. Curated offers excellent quality and value. Premier adds upgraded hotels and exclusive experiences. Prestige is our top tier with the finest hotels, private transfers, and VIP access.',
+    tag: 'itineraries'
+  },
+  {
+    id: 'I-3',
+    question: 'Are flights always included?',
+    answer: 'It depends on the itinerary. Amsterdam packages do not include flights (since most clients are local). Dubai and Hurghada packages include return flights from Amsterdam Schiphol (AMS). This is clearly noted on each itinerary.',
+    tag: 'itineraries'
+  },
+  {
+    id: 'I-4',
+    question: 'Can I book for a group or family?',
+    answer: 'Yes. Our itineraries can be adapted for couples, families, and groups. Tell us how many travellers and any specific requirements (child-friendly hotels, interconnecting rooms, etc.) and we will adjust the proposal accordingly.',
+    tag: 'itineraries'
+  },
+  {
+    id: 'I-5',
+    question: 'Do prices change depending on the season?',
+    answer: 'Yes. Prices on our website reflect starting rates and may vary based on travel dates, availability, and seasonal demand. Your advisor will provide exact pricing based on your preferred dates.',
+    tag: 'itineraries'
+  },
+  {
+    id: 'I-6',
+    question: 'Can I upgrade my hotel or add extra nights?',
+    answer: 'Of course. Upgrades, extensions, and add-ons are always available. Let your advisor know your preferences and they will include the options and pricing in your proposal.',
+    tag: 'itineraries'
+  },
+  {
+    id: 'I-7',
+    question: 'Do you arrange visas or travel documents?',
+    answer: 'We provide guidance on visa requirements for your destination and can recommend visa services. However, it remains the traveller\'s responsibility to ensure they have valid travel documents before departure.',
+    tag: 'itineraries'
+  },
+  {
+    id: 'I-8',
+    question: 'Is travel insurance included?',
+    answer: 'Travel insurance is not included in our packages but is strongly recommended. We can advise on suitable policies and providers. Some credit cards also offer travel insurance — check with your bank.',
+    tag: 'itineraries'
+  },
+
+  // TRAVEL INFO FAQs (T-1 to T-6)
+  {
+    id: 'T-1',
+    question: 'Do I need a visa for Dubai or Egypt?',
+    answer: 'EU/EEA passport holders receive a visa on arrival in both the UAE and Egypt. For other nationalities, requirements vary. Your advisor will confirm the specific visa requirements based on your passport.',
+    tag: 'travel-info'
+  },
+  {
+    id: 'T-2',
+    question: 'Are any vaccinations required?',
+    answer: 'No mandatory vaccinations are currently required for Amsterdam, Dubai, or Hurghada for most travellers. We recommend checking the latest advice from your GP or the RIVM (Dutch National Institute for Public Health) before travelling.',
+    tag: 'travel-info'
+  },
+  {
+    id: 'T-3',
+    question: 'How do airport transfers work?',
+    answer: 'Where transfers are included, a driver will meet you at arrivals with a name sign. Transfer details and driver contact information are shared via WhatsApp before you land.',
+    tag: 'travel-info'
+  },
+  {
+    id: 'T-4',
+    question: 'What is the baggage allowance?',
+    answer: 'Baggage allowances depend on the airline and fare class. Your booking confirmation will include full details. Most packages include 23kg checked luggage plus a cabin bag.',
+    tag: 'travel-info'
+  },
+  {
+    id: 'T-5',
+    question: 'What currency should I bring?',
+    answer: 'Amsterdam uses Euros (€), Dubai uses Dirhams (AED), and Hurghada uses Egyptian Pounds (EGP). Credit cards are widely accepted in all three destinations. Your advisor will provide currency tips in your pre-departure guide.',
+    tag: 'travel-info'
+  },
+  {
+    id: 'T-6',
+    question: 'What happens if my flight is delayed or cancelled?',
+    answer: 'Your advisor monitors your flights and will proactively reach out if there are disruptions. We will coordinate with the airline and your hotel to adjust transfers and check-in times as needed.',
+    tag: 'travel-info'
+  },
+
+  // GENERAL FAQs (G-1 to G-6)
+  {
+    id: 'G-1',
+    question: 'How do I contact Prestige Travels?',
+    answer: 'You can reach us via WhatsApp at +31 6 57196097, email at info@prestigetravels.nl, or through the quote form on our website. WhatsApp is the fastest way to reach us.',
+    tag: 'general'
+  },
+  {
+    id: 'G-2',
+    question: 'How large is the Prestige Travels team?',
+    answer: 'We are a small, dedicated team — and that is intentional. Every client is personally looked after by a senior advisor. We do not outsource or use call centres.',
+    tag: 'general'
+  },
+  {
+    id: 'G-3',
+    question: 'Do you speak languages other than English?',
+    answer: 'Yes. Our team speaks Dutch, English, and Arabic. We are happy to communicate in whichever language you prefer.',
+    tag: 'general'
+  },
+  {
+    id: 'G-4',
+    question: 'What are your office hours?',
+    answer: 'Our standard hours are Monday to Friday, 9:00–18:00 CET. WhatsApp messages outside these hours are read and responded to as soon as possible the next working day.',
+    tag: 'general'
+  },
+  {
+    id: 'G-5',
+    question: 'Do you have a sustainability policy?',
+    answer: 'We are committed to responsible travel. We work with locally owned suppliers where possible, recommend carbon offset programmes, and avoid promoting activities that exploit animals or damage ecosystems.',
+    tag: 'general'
+  },
+  {
+    id: 'G-6',
+    question: 'How do I make a complaint?',
+    answer: 'We take complaints seriously. Email info@prestigetravels.nl with the subject line "Complaint" and your booking reference. We aim to acknowledge complaints within 24 hours and resolve them within 14 working days.',
+    tag: 'general'
   }
 ];
 
@@ -384,5 +528,5 @@ function getTierDisplay(tier) {
   return map[tier] || { label: tier, className: '' };
 }
 
-// Export for use in app.js if modules were used, but we'll just load this script first.
+// Export for use in app.js
 window.PT_DATA = { destinations, itineraries, faqs, getTierDisplay };

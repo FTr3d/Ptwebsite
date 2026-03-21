@@ -5,8 +5,8 @@
   --color-offwhite: #F5F3EF;
   --color-charcoal: #1A1A1A;
   
-  --font-heading: 'Carla Sans', 'Montserrat', sans-serif;
-  --font-body: 'Agatho Light', 'Georgia', serif;
+  --font-heading: 'Carla Sans', 'Josefin Sans', sans-serif;
+  --font-body: 'Agatho Light', 'EB Garamond', serif;
 }
 
 * {
